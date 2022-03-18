@@ -18,11 +18,16 @@
                 <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
                 <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                 <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
                 <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
             </nav>
         </a>
     </div>
-
+       
+    <nav>
+    <a href="../index.html">Voltar Para Tela index</a>
+    </nav>
+    
     <div class="meio">
         <h1>Login Dono</h1>
         <form method="POST">
