@@ -15,6 +15,7 @@
             <h2 >Sistema de Aluguel de Quadras Esportivas</h2>
             <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
             <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
             <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
         </nav>
     </div>
@@ -104,9 +105,11 @@
     </form>
 </body>
 <footer class="rodape">
-    <div class="internorodape"><br>
-    <p>APP Desenvolvido por</p><a href="https://github.com/WALTER-OBS-DEBUG" target="_blank" >Walter Jonas, Antony Gusmão e Mikael Hayden &copy; </a>
-    <i class="bi bi-diamond-half"></i>
-    </div>
+            APP Desenvolvido por
+            <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
+            <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
+            <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
+            <i class="bi bi-diamond-half"></i>
+            <i class="bi bi-diamond-half"></i>
 </footer>
 </html>

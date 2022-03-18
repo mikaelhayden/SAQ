@@ -25,7 +25,6 @@ div.text-center{
     border: 10px;
     background-color:  #3EF079;
     border-bottom: 8px solid rgb(24, 25, 21);
-    margin-bottom: 70px
     
 }
 
@@ -176,7 +175,7 @@ a#cadastrese{
 
 footer.rodape{
     margin-bottom: -90px;
-    background-color:rgb(24, 25, 21);
+    background-color: black;
     height: 100px;
     position: absolute;
     border-top: 8px solid #3EF079;      
