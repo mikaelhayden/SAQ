@@ -37,8 +37,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Cliente</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nav_foot.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body>
@@ -55,17 +55,31 @@
             if($sql->rowCount()>0)
             {
                 list($nome)=$sql->fetch();
-                echo"<h1 class='h3 mb-3 font-weight-normal'> Bem vindo, $nome <font color='#3EF079'>___________</font> Area do Cliente <font color='#3EF079'>__________________</font> Hoje: $date ás $hora</h1>";          
+                echo"  <div class='informacao'>
+                <div id='texto'>Bem Vindo, $nome</div>
+                <div id='texto'>Área Do Cliente</div>
+                <div id='texto'>Hoje: $date ás $hora</div>
+        </div>";          
             }
         ?>
 
     </div>
-    <div class="optionlog"> 
-        <a class="option" href="TelaFazerReserva.php"><button type="button" class="btn btn-outline-secondary">Fazer Reserva</button></a>
-        <a class="option" href="TelaMinhasReservas.php"><button type="button" class="btn btn-outline-secondary">Minhas Reserva</button></a>  
-        <a class="option" href="TelaMeusRelatoriosReservas.php"><button type="button" class="btn btn-outline-secondary">Relatórios de aluguel</button></a>  
-        <a class="option" href="../Model/SairCliente.php"><button type="button" class="btn btn-outline-secondary">Encerrar Sessão</button></a>
-    </div>
+    <section class= "corpo">
+        <br><br><br>
+            <div class="opt"> 
+                <a href="TelaFazerReserva.php"><img src="assets/img/reserva.png" alt="Inserir" width="75">Fazer Reserva</a>
+            </div>
+            <div class="opt"> 
+                <a href="TelaMinhasReservas.php"><img src="assets/img/lupa.png" alt="Inserir" width="75">Minhas Reserva</a>  <br>
+            </div>
+            <div class="opt"> 
+                <a href="TelaMeusRelatoriosReservas.php"><img src="assets/img/tabela-de-edicao.png" alt="Inserir" width="75">Relatórios de aluguel</a>  
+            </div>
+            <div class="opt"> 
+                <a href="../Model/SairCliente.php"><img src="assets/img/logout.png" alt="Inserir" width="75">>Encerrar Sessão</a>
+            </div>
+        <br><br><br>
+    </section>
 </body>
 
 <footer class="rodape">

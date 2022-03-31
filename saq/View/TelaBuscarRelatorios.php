@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAQ-Cliente</title>    
+    <title>SAQ-Buscar Relatorios</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nav_foot.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -17,17 +16,21 @@
             <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
             <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
             <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-            <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
+            <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />   
         </nav>
+        <p id="">Verificar Relatórios</p> 
     </div>
-    <h1 class="h3 mb-3 font-weight-normal">Relatórios de aluguel</h1>
-    <form method="POST">
-        <div class="form-login">
-            <input type="email" id="inputEmail" name="Email_cliente" class="#" placeholder="Insira o email do Cliente" maxlength="30" required autofocus> <br>
-            <input class="buttonoptions" name="verificar" value="Verificar relatórios" type="submit">
-            <center><a class='option' href='TelaFuncionario.php'>Voltar para tela principal</a>
+    <section class= "corpo">
+    <br><br><br>
+        <div class="meio2">
+            <form method="POST">
+            <div class="form-loginrelatorio">
+                <input type="email" id="inputEmail" name="Email_cliente" placeholder="Insira o email do Cliente" maxlength="30" required autofocus> <br>
+                <input class="buttonoptions" name="verificar" value="Verificar relatórios" type="submit">
+            </div>
         </div>
-    </form>   
+    </form>  
+    </section>
 
     <?php
         //Conecta com os arquivos
@@ -53,7 +56,7 @@
             //$email_cookie = $_COOKIE['Email_dono'];
             if($f->relatorios($Email_cliente)==false)
             {
-                echo "<h2><center>Não há reservas de clientes com esse email! </h2>";
+                echo "<div id='semreservas'><p>Não há reservas de clientes com esse email!</p></div>";
             }
         }
     ?>

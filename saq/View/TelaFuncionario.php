@@ -28,17 +28,16 @@
     $date = date('d/m/Y');
     $hora= date('H:i');
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAQ-Funcionário</title>  
+    <title>SAQ-</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nav_foot.css">
-    <link rel="stylesheet" href="assets/css/style.css">       
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body>
@@ -54,25 +53,34 @@
         <?php
             if($sql->rowCount()>0)
             {
-                list($nome)=$sql->fetch();               
-                echo"<h1 class='h3 mb-3 font-weight-normal'> Bem vindo, $nome <font color='#3EF079'>___________</font> Area do Funcionário <font color='#3EF079'>__________________</font> Hoje: $date ás $hora</h1>";                          
+                list($nome)=$sql->fetch();
+                echo"  <div class='informacao'>
+                <div id='texto'>Bem Vindo, $nome</div>
+                <div id='texto'>Área Do Funcionário</div>
+                <div id='texto'>Hoje: $date ás $hora</div>
+        </div>";          
             }
         ?>
+    </div>
 
-    </div>
-    <div class="optionlog">   
-        <a class="option" href="TelaBuscarRelatorios.php"><button type="button" class="btn btn-outline-secondary">Verificar relatórios de aluguel</button></a> 
-        
-        <a class="option" href="../Model/SairFuncionario.php"><button type="button" class="btn btn-outline-secondary">Encerrar Sessão</button></a>
-    </div>
+    <section class= "corpo">
+        <br><br><br>
+        <div class="opt">   
+            <a href="TelaBuscarRelatorios.php" ><img src="assets/img/lupa.png" alt="Inserir" width="65">Verificar relatórios de aluguel</a> 
+        </div>
+        <div class="opt">   
+            <a href="../Model/SairFuncionario.php"><img src="assets/img/logout.png" alt="Inserir" width="75">>Encerrar Sessão</a>
+        </div>
+        <br><br><br>
+    </section>
 </body>
 
-<footer class="rodape">
+    <footer class="rodape">
             APP Desenvolvido por
             <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
             <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
             <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
-</footer>
-</html>
+    </footer>
+    </html>

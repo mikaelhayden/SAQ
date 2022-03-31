@@ -1,11 +1,10 @@
-
 /*integrei o arquivo nav_foot ao arquivo estilo
-assim todo css em apenas um arquivo, talvez mais pra frente faça outros arquivos
-css tbm coloquei html e body com height e sidth 100% e fiz algumas mosificações no RODAPÉ
-agora ele fica apenas embaixo sem atrapalhar a página - hayden
+assim todo css em apenas um arquivo, talvez mais pra frente faÃ§a outros arquivos
+css tbm coloquei html e body com height e sidth 100% e fiz algumas mosificaÃ§Ãµes no RODAPÃ‰
+agora ele fica apenas embaixo sem atrapalhar a pÃ¡gina - hayden
 
 <!-->no index Modifiquei o footer, tirei a classe rodape interno, e o P que
-    estava atrapalhando o rodape por n sei que caralhos, e também coloquei um link no cabeçalho pra voltar pro index em todas as 
+    estava atrapalhando o rodape por n sei que caralhos, e tambÃ©m coloquei um link no cabeÃ§alho pra voltar pro index em todas as 
     paginas<!-->
 */
 @charset "utf-8";
@@ -37,6 +36,20 @@ div.text-center{
     height: 25vh;
 }
 
+.informacao{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    font-weight: 700;
+    font-size: 28px;
+    color: rgb(24, 25, 21);
+}
+.text-center > p{
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(24, 25, 21);
+}
 
 h1{
     padding-top: 10px;
@@ -49,12 +62,18 @@ h1{
 h2
 {
     font-family: 'fantasy', sans-serif;
-    font-size: 38px;
+    font-size: 40px;
+    font-weight: 550;
     color: rgb(24, 25, 21);
 }
 
 .corpo
 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 	flex: 1 0 auto;
     background-image: linear-gradient(#3EF079, rgb(24, 25, 21));
 }
@@ -71,13 +90,13 @@ div.mid
     border-radius: 10px;
     border: 4px solid #3EF079;
 }
-/*Cabeçalho link para o index*/
+/*CabeÃ§alho link para o index*/
 a.principal
 {
     text-decoration: none;
 }
 
-/*Opções de cadastro*/
+/*OpÃ§Ãµes de cadastro*/
 
 /*Opcoes de Login da tela index*/
 div.meio   
@@ -89,6 +108,19 @@ div.meio
     margin: auto;
     padding-bottom: 20px;
     padding-top: 20px;
+    border-radius: 10px;
+    border: 4px solid #3EF079;
+}
+
+div.meio2   /*MEIO Pequeno*/
+{
+    text-align: center;
+    background-color: rgb(24, 25, 21);
+    width: 450px;
+    height:200px;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 13px;
     border-radius: 10px;
     border: 4px solid #3EF079;
 }
@@ -140,12 +172,31 @@ button.btn-outline-warning
     color: #1069c8;
 }
 
+.form-loginrelatorio{
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 10px;
+    color: #1069c8;
+}
+
 /*as duas caixinhas de input */
 .form-login > input{
     padding: 10px;
     border-radius: 6px;
     width: 200px;
     margin-bottom: 20px;
+}
+
+.form-loginrelatorio > input{
+    padding: 10px;
+    border-radius: 6px;
+    width: 200px;
+    margin-top: 25px;
+    margin-right: 0px;
+
 }
 
 /*Botoes*/
@@ -182,12 +233,15 @@ a#cadastrese
 {
     width: 250px;
     margin: 10px auto;
+    margin-top: 30px;
     padding: 10px;
     background-color:rgba(211, 26, 26, 0.3);
     border: 2px solid rgba(139, 9, 9, 0.979);
     border-radius: 15px;
     color: black;
+
 }
+
 #sucesso
 {
     width: 200px;
@@ -197,7 +251,22 @@ a#cadastrese
     border: 2px solid rgba(10, 134, 107, 0.979);
     border-radius: 15px;
 }
-            /*--------------------RODAPÉ-----------------------*/
+
+#semreservas{
+    position: absolute;
+    width: 350px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -300%);
+    background-color:rgba(211, 26, 26, 0.3);
+    border: 2px solid rgba(139, 9, 9, 0.979);
+    border-radius: 15px;
+    color: black;
+    
+}
+
+            /*--------------------RODAPÃ‰-----------------------*/
 
 /*Rodape do site padrao*/
 
@@ -217,4 +286,33 @@ a{
     font-size: 13pt;
     font-family: 'Courie', monospace;        /*estilizei o link*/
     color: #3EF079;
+}
+
+p{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/*Classes para os botoes de opÃ§Ãµes do usuario na sua tela  */
+.opt{
+    margin-right: 15px;
+    margin-left: 15px;
+    width: auto;
+    height: auto;
+}
+
+.opt>a{
+    font-size: 25px;
+    font-weight: 1000;
+    color: white;
+    text-decoration: none;
+}
+
+
+.opt:hover{
+    opacity: 0.5;
+}
+
+.opt:hover > a{
+    color: #000000;
 }

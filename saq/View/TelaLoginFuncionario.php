@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Login-Funcionário</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nav_foot.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -34,7 +33,7 @@
                     <input type="password" id="inputPassword" name="Senha_Funcionario"  placeholder="Entre com a senha" required><br>
             
                     <button class="buttonoptions" name="entrar" type="submit">Entrar</button>
-                    <a id="cadastrese" href="TelaCadastroFuncionario.php">Cadastre-se</a></abbr> <br><br>
+                    <a id="cadastrese" href="TelaCadastroFuncionario.php">Cadastre-se</a><br><br>
         
                     <?php
                         //Conecta com os arquivos

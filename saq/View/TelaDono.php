@@ -37,8 +37,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Dono</title>   
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/nav_foot.css">
-    <link rel="stylesheet" href="assets/css/style.css">       
+    <link rel="stylesheet" href="assets/css/style.css">     
 </head>
 
 <body>
@@ -55,23 +54,36 @@
             if($sql->rowCount()>0)
             {
                 list($nome)=$sql->fetch();              	
-                echo"<h1 class='h3 mb-3 font-weight-normal'> Bem vindo, $nome <font color='#3EF079'>______________</font> Area do Proprietário <font color='#3EF079'>__________________</font> Hoje: $date ás $hora</h1>";                    
+                echo"  <div class='informacao'>
+                <div id='texto'>Bem Vindo, $nome</div>
+                <div id='texto'>Área Do Dono</div>
+                <div id='texto'>Hoje: $date ás $hora</div>
+                </div>";                  
             }
         ?>
 
     </div>   
-    <div class="optionlog">	
-    	<a class="option" href="#"><button type="button" class="btn btn-outline-secondary">Disponibilizar dias e horários</button></a>
-    	<a class="option" href="../Model/SairDono.php"><button type="button" class="btn btn-outline-secondary">Sair da Sessão</button></a>
-    </div>
-</body>
+    <section class= "corpo">
+        <br><br><br>
+            
+                <div class="opt">	
+                    <a  href="#"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Inserir Dias e Horarios</a>
+                </div>
 
-<footer class="rodape">
+                <div class="opt">	
+                    <a  href="../Model/SairDono.php" ><img src="assets/img/logout.png" alt="Inserir" width="75"> Sair da Sessão</a> 
+                </div>
+        
+        <br><br><br>
+    </section>
+
+    <footer class="rodape">
             APP Desenvolvido por
             <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
             <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
             <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
-</footer>
+    </footer>   
+</body>
 </html>
