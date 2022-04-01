@@ -35,7 +35,7 @@
             
                     <input type="password"  id="inputPassword" name="Senha_dono"  placeholder="Entre com a senha" required><br>
             
-                    <button class="buttonoptions" name="entrar" type="submit">Entrar</button>
+                    <button class="buttonlogin" name="entrar" type="submit">Entrar</button>
                     <a id="cadastrese" href="TelaCadastroDono.php">Cadastre-se</a><br><br> 
        
                     <?php

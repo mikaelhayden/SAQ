@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="text-center">
-    <div class="text-center">
-        <nav id="cabecario">
-            <h2 >Sistema de Aluguel de Quadras Esportivas</h2>
-            <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-            <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
-        </nav>
-        <p>Cancelar Reservas</p> 
+   <div class="text-center">
+           <nav id="cabecario">
+               <a class="principal" href="../index.html">
+                   <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                   <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+                   <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                   <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
+                   <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />
+               </a>
+           </nav>
+           <p>Cancelar Reservas</p> 
     </div>
 
     <section class= "corpo">
@@ -46,8 +48,8 @@
             echo "<h2>Você não fez nenhuma reserva! </h2>";
         }
     ?>
-    <br><a href='TelaMinhasReservas.php'>Voltar para minhas reservas</a><br>
-    <a href='TelaCliente.php'>Voltar para tela principal</a>
+    <br><br><br><a href='TelaMinhasReservas.php'>Voltar para minhas reservas</a><br><br>
+    <a href='TelaCliente.php'>Voltar para tela principal</a><br>
     <br>
     </section>
 

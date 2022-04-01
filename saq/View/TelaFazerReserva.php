@@ -11,17 +11,19 @@
 <body class="text-center">
 
     <div class="text-center">
-        <a class="principal" href="../index.html">
+        
             <nav id="cabecario">
-                <h2 >Sistema de Aluguel de Quadras Esportivas</h2>
-                <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+                <a class="principal" href="../index.html">
+                    <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                    <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+                    <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                    <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
+                    <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />
+                </a>
             </nav>
-        </a>
-        <p>Solicitar Reservas</p> 
-        <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
+       
+            <p>Solicitar Reservas</p> 
+            <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
 
     <section class="corpo">

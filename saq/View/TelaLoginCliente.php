@@ -32,7 +32,7 @@
 
                     <input type="password" id="inputPassword" name="Senha_cliente" placeholder="Entre com a senha" required><br>
                 
-                    <button class="buttonoptions" name="entrar" type="submit">Entrar</button>
+                    <button class="buttonlogin" name="entrar" type="submit">Entrar</button>
                     <a id="cadastrese" href="TelaCadastroCliente.php">Cadastre-se</a></abbr> <br><br>
        
                     <?php

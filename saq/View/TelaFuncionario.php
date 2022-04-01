@@ -42,13 +42,15 @@
 
 <body>
     <div class="text-center">
-        <nav id="cabecario">
-            <h2>Sistema de Aluguel de Quadras Esportivas</h2>
-            <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-            <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
-        </nav>
+        <a class="principal" href="../index.html">
+            <nav id="cabecario">
+                <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+                <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
+                <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+            </nav>
+        </a>
 
         <?php
             if($sql->rowCount()>0)
@@ -66,10 +68,10 @@
     <section class= "corpo">
         <br><br><br>
         <div class="opt">   
-            <a href="TelaBuscarRelatorios.php" ><img src="assets/img/lupa.png" alt="Inserir" width="65">Verificar relatórios de aluguel</a> 
+            <a href="TelaBuscarRelatorios.php" ><img src="assets/img/lupa.png" alt="Inserir" width="65">   Relatórios de Aluguel</a> 
         </div>
         <div class="opt">   
-            <a href="../Model/SairFuncionario.php"><img src="assets/img/logout.png" alt="Inserir" width="75">>Encerrar Sessão</a>
+            <a href="../Model/SairFuncionario.php"><img src="assets/img/logout.png" alt="Inserir" width="75">   Encerrar Sessão</a>
         </div>
         <br><br><br>
     </section>

@@ -69,16 +69,16 @@
     <section class= "corpo">
         <br><br>
             <div class="opt"> 
-                <a href="TelaFazerReserva.php"><img src="assets/img/reserva.png" alt="Inserir" width="75">Fazer Reserva</a>
+                <a href="TelaFazerReserva.php"><img src="assets/img/reserva.png" alt="Inserir" width="75">   Fazer Reserva</a>
             </div>
             <div class="opt"> 
-                <a href="TelaMinhasReservas.php"><img src="assets/img/lupa.png" alt="Inserir" width="75">Minhas Reserva</a>  <br>
+                <a href="TelaMinhasReservas.php"><img src="assets/img/lupa.png" alt="Inserir" width="75">   Minhas Reserva</a>  <br>
             </div>
             <div class="opt"> 
-                <a href="TelaMeusRelatoriosReservas.php"><img src="assets/img/tabela-de-edicao.png" alt="Inserir" width="75">Relatórios de aluguel</a>  
+                <a href="TelaMeusRelatoriosReservas.php"><img src="assets/img/tabela-de-edicao.png" alt="Inserir" width="75">   Relatórios de aluguel</a>  
             </div>
             <div class="opt"> 
-                <a href="../Model/SairCliente.php"><img src="assets/img/logout.png" alt="Inserir" width="75">>Encerrar Sessão</a>
+                <a href="../Model/SairCliente.php"><img src="assets/img/logout.png" alt="Inserir" width="75">   Encerrar Sessão</a>
             </div>
         <br>    
     </section>
