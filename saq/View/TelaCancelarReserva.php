@@ -17,9 +17,11 @@
             <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
             <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
         </nav>
+        <p>Cancelar Reservas</p> 
     </div>
-    <h1 class="h3 mb-3 font-weight-normal">Cancelar Reserva </h1>
 
+    <section class= "corpo">
+        <br><br><br><br>
     <?php
          //Conecta com os arquivos
         require_once '../Controller/Conexao.php';
@@ -44,8 +46,10 @@
             echo "<h2>Você não fez nenhuma reserva! </h2>";
         }
     ?>
-    <br><a class='option' href='TelaMinhasReservas.php'>Voltar para minhas reservas</a><br>
-    <a class='option' href='TelaCliente.php'>Voltar para tela principal</a>
+    <br><a href='TelaMinhasReservas.php'>Voltar para minhas reservas</a><br>
+    <a href='TelaCliente.php'>Voltar para tela principal</a>
+    <br>
+    </section>
 
 </body>
 <footer class="rodape">

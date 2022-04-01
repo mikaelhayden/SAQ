@@ -66,20 +66,28 @@ Class Funcionario
 				if($sql->rowCount()>0)
 				{
 					$tabela_reserva = "<font color='black'><center><table border=3>";
-					$tabela_reserva.="";
+					$tabela_reserva.="
+					<table> 
+					<tr>
+						<th>Nome do cliente</th>
+						<th>Horários de Inicio da Reserva</th>
+						<th>Horário de Fim da Reserva</th>
+						<th>Data da Reserva</th>
+					</tr>
+					";
 					while(list($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $Nome_cliente)=$sql->fetch())
 					{
 						$Data_Reserva=date('d/m/Y', strtotime($Data_Reserva));
-            			$tabela_reserva.="           			
-		                <tr>
-		                	<td>
-		                	<h3 class='h3 mb-3 font-weight-normal'>
-		                	
-		                		Quadra programada para ser reservada no dia $Data_Reserva no horário das $Inicio_Reserva até ás $Fim_Reserva para o responsável $Nome_cliente.
-		                	
-		                	</h3>
-		                	<td>
-		               	</tr>";
+            			$tabela_reserva.=" 
+						        			
+							<tr>
+							<th>$Nome_cliente</th>
+							<th>$Inicio_Reserva</th>
+							<th>$Fim_Reserva</th>
+							<th>$Data_Reserva</th>
+							</tr>
+							<table>
+						";
 					}
 					$tabela_reserva.="</table></font>";
 

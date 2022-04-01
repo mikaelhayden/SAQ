@@ -25,7 +25,7 @@ body {
 div.text-center{
     border: 10px;
     background-color:  #3EF079;
-    border-bottom: 8px solid rgb(24, 25, 21);
+    border-bottom: 4px solid rgb(24, 25, 21);
     
 }
 
@@ -63,14 +63,30 @@ h2
 {
     font-family: 'fantasy', sans-serif;
     font-size: 40px;
-    font-weight: 550;
+    font-weight: 450;
     color: rgb(24, 25, 21);
 }
+
+h5
+{
+   padding-top: 10px;
+   padding-bottom: -10px;
+   font-size: 12pt;
+   font-family: 'Courie', monospace;
+   color: #3EF079;
+}
+
+h3{
+    padding-top: 10px;
+    padding-bottom: -10px;
+    font-size: 17pt;
+    font-family: 'Courie', monospace;
+    color: black;
+    }
 
 .corpo
 {
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -114,11 +130,12 @@ div.meio
 
 div.meio2   /*MEIO Pequeno*/
 {
-    text-align: center;
     background-color: rgb(24, 25, 21);
     width: 450px;
     height:200px;
-    margin: auto;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 10px;
     padding-bottom: 20px;
     padding-top: 13px;
     border-radius: 10px;
@@ -216,6 +233,25 @@ button.btn-outline-warning
     background-color:  #3FF099 ;
 }
 
+/*Link que vai para tela TelaCancelarReserva.php*/
+#cancelarreserva{
+    background-color: rgb(24, 25, 21);
+    color: #3EF079;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+/*Botao de Cancelar Reserva da Tela do cliente*/
+#bntcancelarreserva{
+    margin-top: 25px;
+}
+
+/*Animaçao com pseuelementos*/
+#cancelarreserva:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+
 /*Descricao*/
 .description_login
 {
@@ -251,20 +287,43 @@ a#cadastrese
     border: 2px solid rgba(10, 134, 107, 0.979);
     border-radius: 15px;
 }
-
+/*Div que notifica o funcionario que nao ha reservas*/
 #semreservas{
     position: absolute;
     width: 350px;
     text-align: center;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -300%);
+    transform: translate(-50%, -650%);
     background-color:rgba(211, 26, 26, 0.3);
     border: 2px solid rgba(139, 9, 9, 0.979);
     border-radius: 15px;
     color: black;
     
 }
+
+/*Mensagem de que nao possui relatorio para o cliente*/
+#semrelatorios{
+    text-align: center;
+    font-size:45px;
+    font-weight: 500;
+    color: black;
+}
+
+/*Icone de voltar no canto superior esquerdo da tela dos usuarios*/
+#iconevoltar{
+    position: absolute;
+    color: #000000;
+    left: 0px;
+    top: 25%;
+    text-decoration: none;
+    z-index: 1;
+}
+
+#iconevoltar:hover{
+    opacity: 0.6;
+}
+
 
             /*--------------------RODAPÉ-----------------------*/
 
@@ -295,10 +354,11 @@ p{
 
 /*Classes para os botoes de opções do usuario na sua tela  */
 .opt{
-    margin-right: 15px;
-    margin-left: 15px;
+    position: relative;
     width: auto;
     height: auto;
+    margin: auto;
+    text-align: center;   
 }
 
 .opt>a{
@@ -306,13 +366,25 @@ p{
     font-weight: 1000;
     color: white;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 
-.opt:hover{
+.opt > a:hover{
     opacity: 0.5;
-}
-
-.opt:hover > a{
     color: #000000;
 }
+
+/*Tabela de Consulta de Reservas*/
+td, th {
+    border: 1px solid;
+    background-color: rgba(255, 255, 255, 0.739);
+    font-size: 20px;
+  }
+  
+
+  table {
+    width: 1000px;
+    left: 50%;
+  }
+  

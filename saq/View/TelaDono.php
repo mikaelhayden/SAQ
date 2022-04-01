@@ -42,13 +42,15 @@
 
 <body>
     <div class="text-center">
-        <nav id="cabecario">
-            <h2>Sistema de Aluguel de Quadras Esportivas</h2>
-            <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-	        <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-	        <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
-        </nav>
+        <a class="principal" href="../index.html">
+            <nav id="cabecario">
+                <h2>Sistema de Aluguel de Quadras Esportivas</h2>
+                <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+	            <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
+	            <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
+            </nav>
+        </a>
 
         <?php
             if($sql->rowCount()>0)

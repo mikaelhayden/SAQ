@@ -20,8 +20,10 @@
                 <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
             </nav>
         </a>
+        <p>Solicitar Reservas</p> 
+        <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
-    
+
     <section class="corpo">
         <br><br><br>
         <div class= "mid">
@@ -89,7 +91,6 @@
                             }
                         }
                     ?>
-                    <a class='option' href='TelaCliente.php'>Voltar para tela principal</a>
                 </div>
             </form>
         </div>

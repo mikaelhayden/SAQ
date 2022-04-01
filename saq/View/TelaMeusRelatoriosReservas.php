@@ -11,50 +11,55 @@
 
 <body>
     <div class="text-center">
-        <nav id="cabecario">
-            <h2>Sistema de Aluguel de Quadras Esportivas</h2>
-            <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-            <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-            <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
-        </nav>
+        <a class="principal" href="../index.html">
+            <nav id="cabecario">
+                <h2>SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+                <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+            </nav>
+        </a>
+        <p id="">Relatórios de Aluguel</p> 
+        <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
-        <h1 class="h3 mb-3 font-weight-normal">Relatórios de aluguel</h1>
 
+    <section class="corpo">
+        <br><br><br><br>
         <?php
-         //Conecta com os arquivos
-        require_once '../Controller/Conexao.php';
-        require_once '../Model/Cliente.php';
+            //Conecta com os arquivos
+            require_once '../Controller/Conexao.php';
+            require_once '../Model/Cliente.php';
                 
-        //Instancias
-        $c = new Cliente;
-        $conexao = new Conexao;
+            //Instancias
+            $c = new Cliente;
+            $conexao = new Conexao;
 
-        $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
+            $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
 
-        session_start();
-        if(!isset($_SESSION['ID_Cliente']))
-        {
-            header("location: TelaLoginCliente.php");
-            exit;
-        }  
+            session_start();
+            if(!isset($_SESSION['ID_Cliente']))
+            {
+                header("location: TelaLoginCliente.php");
+                exit;
+            }  
                
-        $email_cookie = $_COOKIE['Email_cliente'];
-        if($c->relatorios($email_cookie)==false)
-        {
-            echo "<h2><center>Não tem relatórios! </h2>";
-        }
+            $email_cookie = $_COOKIE['Email_cliente'];
+            if($c->relatorios($email_cookie)==false)
+            {
+                echo "<div> <p id='semrelatorios'>Você Não Possui Relatórios :(</p></div>";
+            }
         ?>
-             
-        <a class='option' href='TelaCliente.php'>Voltar para tela principal</a>
-</body>
+    </section>
 
-<footer class="rodape">
+    <footer class="rodape">
             APP Desenvolvido por
             <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
             <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
             <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
-</footer>
+    </footer>
+</body>
+
 </html>

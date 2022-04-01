@@ -43,13 +43,15 @@
 
 <body>
     <div class="text-center">
-        <nav id="cabecario">
-            <h2>Sistema de Aluguel de Quadras Esportivas</h2>
-            <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-            <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-            <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
-        </nav>
+        <a class="principal" href="../index.html">
+            <nav id="cabecario">
+                <h2>SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+                <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+            </nav>
+        </a>
 
         <?php
             if($sql->rowCount()>0)
@@ -65,7 +67,7 @@
 
     </div>
     <section class= "corpo">
-        <br><br><br>
+        <br><br>
             <div class="opt"> 
                 <a href="TelaFazerReserva.php"><img src="assets/img/reserva.png" alt="Inserir" width="75">Fazer Reserva</a>
             </div>
@@ -78,7 +80,7 @@
             <div class="opt"> 
                 <a href="../Model/SairCliente.php"><img src="assets/img/logout.png" alt="Inserir" width="75">>Encerrar Sessão</a>
             </div>
-        <br><br><br>
+        <br>    
     </section>
 </body>
 

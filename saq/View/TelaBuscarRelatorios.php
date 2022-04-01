@@ -18,7 +18,8 @@
             <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
             <img  src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />   
         </nav>
-        <p id="">Verificar Relatórios</p> 
+        <p>Verificar Relatórios</p> 
+        <a id ='iconevoltar' href="TelaFuncionario.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
     <section class= "corpo">
     <br><br><br>
@@ -30,8 +31,6 @@
             </div>
         </div>
     </form>  
-    </section>
-
     <?php
         //Conecta com os arquivos
         require_once '../Controller/Conexao.php';
@@ -60,6 +59,8 @@
             }
         }
     ?>
+    </section>
+
     
 </body>
 <footer class="rodape">
