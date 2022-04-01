@@ -20,6 +20,8 @@
                </a>
            </nav>
            <p>Cancelar Reservas</p> 
+           <a id ='iconevoltar' href="TelaMinhasReservas.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a> 
+           <a id ='iconehome' href="TelaCliente.php"><img src="assets/img/botao-home.png" width="35" alt="Voltar"></a> 
     </div>
 
     <section class= "corpo">
@@ -48,9 +50,7 @@
             echo "<h2>Você não fez nenhuma reserva! </h2>";
         }
     ?>
-    <br><br><br><a href='TelaMinhasReservas.php'>Voltar para minhas reservas</a><br><br>
-    <a href='TelaCliente.php'>Voltar para tela principal</a><br>
-    <br>
+    <br><br><br><br>
     </section>
 
 </body>
