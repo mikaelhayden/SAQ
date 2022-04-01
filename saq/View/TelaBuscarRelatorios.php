@@ -55,7 +55,7 @@
             //$email_cookie = $_COOKIE['Email_dono'];
             if($f->relatorios($Email_cliente)==false)
             {
-                echo "<div id='semreservas'><p>Não há reservas de clientes com esse email!</p></div>";
+                echo "<div id='erro'><p>Não há reservas de clientes com esse email!</p></div>";
             }
         }
     ?>

@@ -67,7 +67,7 @@ Class Funcionario
 				{
 					$tabela_reserva = "<font color='black'><center><table border=3>";
 					$tabela_reserva.="
-					<table> 
+					
 					<tr>
 						<th>Nome do cliente</th>
 						<th>Horários de Inicio da Reserva</th>
@@ -86,7 +86,7 @@ Class Funcionario
 							<th>$Fim_Reserva</th>
 							<th>$Data_Reserva</th>
 							</tr>
-							<table>
+							
 						";
 					}
 					$tabela_reserva.="</table></font>";
