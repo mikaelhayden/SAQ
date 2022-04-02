@@ -35,6 +35,21 @@ div.text-center{
     text-align: center;
     height: 25vh;
 }
+/*Animação das Bolas*/
+@keyframes bolas{
+    from{
+        transform: rotate(0deg);
+        
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+nav > img:hover{
+    animation: bolas 2s linear infinite ;
+}
+/*Animação das Bolas*/
 
 .informacao{
 
@@ -61,9 +76,9 @@ h1{
 
 h2
 {
-    font-family: 'fantasy', sans-serif;
-    font-size: 40px;
-    font-weight: 450;
+    Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-size: 43px;
+    font-weight: 600;
     color: rgb(24, 25, 21);
 }
 
@@ -278,7 +293,11 @@ button.btn-outline-warning
     opacity: 0.9;
     text-decoration: none;
 }
-
+#imagemindex{
+    position: absolute;
+    right: 75%;
+    top: 22%;
+}
 
 /*Descricao*/
 .description_login
@@ -367,14 +386,16 @@ a#cadastrese
 #iconevoltar:hover{
     opacity: 0.6;
 }
+
 /*Classes para os botoes de opções do usuario na sua tela  */
 .opt{
     position: relative;
-    width: 300px;
-    height: 130px;
+    /* width: 450px; */
+    height: 120px;
     margin: auto;
     margin-top: 20px;
-    text-align: center;   
+    text-align: center;
+
 }
 
 .opt>a{

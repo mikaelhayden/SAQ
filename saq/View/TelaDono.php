@@ -38,6 +38,15 @@
     <title>SAQ-Dono</title>   
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">     
+    <style>
+      .opt{
+    position: relative;
+    width: 450px;
+    height: 130px;
+    margin-top: 20px;
+    text-align: justify;
+}
+    </style>
 </head>
 
 <body>
@@ -69,19 +78,19 @@
         <br><br><br>
             
                 <div class="opt">	
-                    <a  href="#"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Inserir Dias e Horarios</a>
+                    <a href="#"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Inserir Dias e Horarios</a>
                 </div>
 
                 <div class="opt">	
-                    <a  href="TelaGroupBy.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
+                    <a  href="TelaGroupBy.php"><img src="assets/img/contador.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
                 </div>
 
                 <div class="opt">	
-                    <a  href="TelaLike.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
+                    <a  href="TelaLike.php"><img src="assets/img/lupa.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
                 </div>
 
                 <div class="opt">	
-                    <a  href="TelaUnion.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
+                    <a  href="TelaUnion.php"><img src="assets/img/livro-de-contato.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
                 </div>
 
                 <div class="opt">	
