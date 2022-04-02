@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAQ-Buscar Relatorios</title>    
+    <title>SAQ-Buscar Cliente</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -20,8 +20,8 @@
                 <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
             </nav>
         </a>
-        <p>Verificar Relatórios</p> 
-        <a id ='iconevoltar' href="TelaFuncionario.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
+        <p>Pesquisar Clientes por letras</p> 
+        <a id ='iconevoltar' href="TelaDono.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
 
     <section class= "corpo">
@@ -29,37 +29,36 @@
         <div class="meio2">
             <form method="POST">
                 <div class="form-loginrelatorio">
-                    <input type="email" id="inputEmail" name="Email_cliente" placeholder="Insira o email do Cliente" maxlength="30" required autofocus> <br>
-                    <input class="buttonoptions" name="verificar" value="Verificar relatórios" type="submit">
+                    <input type="text" id="inputEmail" name="letra" placeholder="Insira a inicial do nome desejado" maxlength="1" required autofocus> <br>
+                    <input class="buttonoptions" name="buscar" value="Buscar" type="submit">
                 </div>
             </form> 
         </div>
      
         <?php
-            //Conecta com os arquivos
+           //Conecta com os arquivos
             require_once '../Controller/Conexao.php';
-            require_once '../Model/Funcionario.php';
-                    
-            //Instancias      
-            $f = new Funcionario;
+            require_once '../Model/Dono.php';
+
+            $d = new Dono;
             $conexao = new Conexao;
 
-            $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
-
-            session_start();
-            if(!isset($_SESSION['ID_Funcionario']))
-            {
-                header("location: TelaLoginFuncionario.php");
-                exit;
-            }  
+            $conexao->conectar("saq", "localhost", "root", "");
             
-            if (isset($_POST['verificar']))
+            session_start();
+            if(!isset($_SESSION['ID_Dono'])) //Se o usuário não estiver logado
             {
-                $Email_cliente = $_POST['Email_cliente'];
+                header("location: TelaLoginDono.php"); //redirecionar para a tela de login
+                exit; //Não executar mais nada depois disso
+            } 
+            
+            if (isset($_POST['buscar']))
+            {
+                $letra = addslashes($_POST['letra']);
                 //$email_cookie = $_COOKIE['Email_dono'];
-                if($f->relatorios($Email_cliente)==false)
+                if($d->like($letra)==false)
                 {
-                    echo "<div id='erro'><p>Não há reservas de clientes com esse email!</p></div>";
+                    echo "<div id='erro'><p>Não há clientes com essa inicial!</p></div>";
                 }
             }
         ?>

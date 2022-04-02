@@ -34,7 +34,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAQ-</title>    
+    <title>SAQ-Funcionário</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     
@@ -44,7 +44,7 @@
     <div class="text-center">
         <a class="principal" href="../index.html">
             <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                 <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 

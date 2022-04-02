@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Minhas-Reservas</title> 
+	<title>Cancelar-Minhas-Reservas</title> 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,7 +12,7 @@
    <div class="text-center">
            <nav id="cabecario">
                <a class="principal" href="../index.html">
-                   <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                   <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                    <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                    <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                    <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 

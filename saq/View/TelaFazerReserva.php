@@ -14,7 +14,7 @@
         
             <nav id="cabecario">
                 <a class="principal" href="../index.html">
-                    <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                    <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                     <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                     <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                     <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
@@ -73,7 +73,7 @@
                                 if($Inicio_Reserva != $Fim_Reserva) //Verifica se o inicio da reserva não é o mesmo que o fim da reserva
                                 {
                                     $email_cookie = $_COOKIE['Email_cliente'];
-                                    if($c->solicitarReserva($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $email_cookie)) //Se a função "solicitarReserva" retornar "true"
+                                    if($c->fazerReserva($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $email_cookie)) //Se a função "solicitarReserva" retornar "true"
                                     {
                                         echo "<div id='sucesso'><center>Reserva realizada! <script> alert('Reserva realizada com sucesso! </script></div><br><a class='option' href='TelaMeusRelatoriosReservas.php'>Ver relatórios de aluguel</a><br>"; //Aparece na tela
                                     }

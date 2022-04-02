@@ -15,7 +15,7 @@
     <div class="text-center">
         <a class="principal" href="../index.html">
             <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img  src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img  src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                 <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
@@ -61,20 +61,16 @@
                             $email = addslashes($_POST['Email_cliente']);
                             $cpf = addslashes($_POST['CPF_Cliente']);
                             $telefone = addslashes($_POST['Telefone_cliente']);
-                            $ag_Conta_cliente = addslashes($_POST['Ag_Conta_Cliente']);
-                            $num_Conta_cliente = addslashes($_POST['Num_Conta_Cliente']);
-                            $banco = addslashes($_POST['Banco']);
-                            $tipo_Conta_cliente = addslashes($_POST['Tipo_Conta_Cliente']);
                             $senha = addslashes($_POST["Senha_cliente"]);
                             $confirmarSenha=addslashes($_POST["confsenha"]);
 
                             //verifica se esta tudo preenchido
-                            if(!empty($nome) && !empty($email) && !empty($senha) && !empty($cpf) && !empty($telefone) && !empty($ag_Conta_cliente) && !empty($num_Conta_cliente) && !empty($banco) && !empty($tipo_Conta_cliente))
+                            if(!empty($nome) && !empty($email) && !empty($senha) && !empty($cpf) && !empty($telefone))
                             {
                                 $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD               
                                 if($senha == $confirmarSenha) //Verifica se a senha que usuário digitou confere com a senha que ele confirmou
                                 {
-                                    if($c->cadastrar($nome,  $cpf, $email, $senha, $telefone, $ag_Conta_cliente, $num_Conta_cliente, $banco, $tipo_Conta_cliente)) //Se a função "cadastrar" retornar "true"
+                                    if($c->cadastrar($nome,  $cpf, $email, $senha, $telefone)) //Se a função "cadastrar" retornar "true"
                                     {
                                         echo "<div id='sucesso'><center>Cadastro realizado! <script> alert('Cadastro realizado! Faça o login e entre no sistema!'); window.location.href='TelaLoginCliente.php'; </script></div>"; //Aparece na tela
                                     }

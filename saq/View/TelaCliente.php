@@ -45,7 +45,7 @@
     <div class="text-center">
         <a class="principal" href="../index.html">
             <nav id="cabecario">
-                <h2>SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <h2>SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                 <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
@@ -76,6 +76,9 @@
             </div>
             <div class="opt"> 
                 <a href="TelaMeusRelatoriosReservas.php"><img src="assets/img/tabela-de-edicao.png" alt="Inserir" width="75">   Relatórios de aluguel</a>  
+            </div>
+            <div class="opt">	
+                    <a  href="TelaUpdateSenha.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
             </div>
             <div class="opt"> 
                 <a href="../Model/SairCliente.php"><img src="assets/img/logout.png" alt="Inserir" width="75">   Encerrar Sessão</a>

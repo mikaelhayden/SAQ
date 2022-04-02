@@ -4,52 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Minhas-Reservas</title> 
+	<title>Contatos de Clientes e funcionários</title> 
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="text-center">
     <div class="text-center">
-            <nav id="cabecario">
-                <a class="principal" href="../index.html">
-                    <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                    <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                    <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                    <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
-                    <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />
-                </a>
-            </nav>
-            <p>Minhas Reservas</p> 
-            <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
+    <a class="principal" href="../index.html">
+        <nav id="cabecario">
+            <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
+            <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
+            <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
+            <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
+            <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+        </nav>
+    </a>
+         <p>Contato dos usuários do sistema (Clientes e funcionários)</p> 
+         <a id ='iconevoltar' href="TelaDono.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
 
-   
     <section class= "corpo">
         <br><br><br><br>
         <?php
             //Conecta com os arquivos
             require_once '../Controller/Conexao.php';
-            require_once '../Model/Cliente.php';
+            require_once '../Model/Dono.php';
                 
             //Instancias
-            $c = new Cliente;
+            $d = new Dono;
             $conexao = new Conexao;
 
             $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
 
             session_start();
-            if(!isset($_SESSION['ID_Cliente']))
+            if(!isset($_SESSION['ID_Dono']))
             {
-                header("location: TelaLoginCliente.php");
+                header("location: TelaLoginDono.php");
                 exit;
             }  
                
-            $email_cookie = $_COOKIE['Email_cliente'];
-            if($c->mostrarReserva($email_cookie)==false)
+            //$email_cookie = $_COOKIE['Email_dono'];
+            if($d->union()==false)
             {
-                echo "<div> <p id='semrelatorios'>Você Não Possui Nenhuma Reserva :(</p></div>";
+                echo "<div> <p id='semrelatorios'>Não Existe Nenhum usuário :(</p></div>";
             }
+           
         ?>
         <br><br>
     </section>

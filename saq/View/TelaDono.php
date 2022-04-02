@@ -44,7 +44,7 @@
      <div class="text-center">
         <a class="principal" href="../index.html">
             <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRAS ESPORTIVAS</h2>
+                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                 <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
@@ -70,6 +70,18 @@
             
                 <div class="opt">	
                     <a  href="#"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Inserir Dias e Horarios</a>
+                </div>
+
+                <div class="opt">	
+                    <a  href="TelaGroupBy.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
+                </div>
+
+                <div class="opt">	
+                    <a  href="TelaLike.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
+                </div>
+
+                <div class="opt">	
+                    <a  href="TelaUnion.php"><img src="assets/img/reserva.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
                 </div>
 
                 <div class="opt">	

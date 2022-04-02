@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus relatórios de aluguel</title>    
+    <title>SAQ-Alterar-Senha</title>    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -13,25 +13,35 @@
     <div class="text-center">
         <a class="principal" href="../index.html">
             <nav id="cabecario">
-                <h2>SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
+                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img src="assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
+                <img src="assets/img/BoladeHandboll.png" alt="SAQ" width ="55" /> 
                 <img src="assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
             </nav>
         </a>
-        <p id="">Meus Relatórios de Aluguel</p> 
+        <p>Atualizar Senha</p> 
         <a id ='iconevoltar' href="TelaCliente.php"><img src="assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
 
-    <section class="corpo">
-        <br><br><br><br>
+    <section class= "corpo">
+        <br><br><br>
+        <div class="meio2">
+            <form method="POST">
+                <div class="form-loginrelatorio">
+                    <input type="password" name="Senha_Nova" minlength="9" maxlength="15" required placeholder="Insira uma Nova Senha"><br>
+		            <input type="password" name="confSenha" minlength="9" maxlength="15" required placeholder="Confirmar Nova Senha" > <br> 
+                    <button class="buttonoptions" name="update" type="submit">Alterar</button>        
+                </div>
+            </form> 
+        </div>
+     
         <?php
             //Conecta com os arquivos
             require_once '../Controller/Conexao.php';
             require_once '../Model/Cliente.php';
-                
-            //Instancias
+                    
+            //Instancias      
             $c = new Cliente;
             $conexao = new Conexao;
 
@@ -43,23 +53,23 @@
                 header("location: TelaLoginCliente.php");
                 exit;
             }  
-               
-            $email_cookie = $_COOKIE['Email_cliente'];
-            if($c->relatorios($email_cookie)==false)
+            
+            if (isset($_POST['update']))
             {
-                echo "<div> <p id='semrelatorios'>Você Não Possui Relatórios :(</p></div>";
+                $novaSenha = addslashes($_POST['Senha_Nova']);
+                $confirmarSenha = addslashes($_POST["confSenha"]);
+                $email_cookie = $_COOKIE['Email_cliente'];
+                $c->updateSenha($novaSenha, $confirmarSenha, $email_cookie);            
             }
         ?>
-    </section>
-
-    <footer class="rodape">
+    </section>   
+</body>
+<footer class="rodape">
             APP Desenvolvido por
             <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
             <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
             <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
-    </footer>
-</body>
-
+</footer>
 </html>
