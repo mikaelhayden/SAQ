@@ -230,6 +230,17 @@ button.btn-outline-warning
     margin-right: 0px;
 
 }
+/*Tela cliente Atualizar senha*/
+.formupdate > input{
+    padding: 10px;
+    border-radius: 6px;
+    width: 200px;
+    margin-top: 6px;
+}
+.formupdate{
+text-align: center;
+}
+
 
 /*Botoes*/
 /*Botao verde mo geral*/
@@ -386,6 +397,7 @@ a#cadastrese
 #iconevoltar:hover{
     opacity: 0.6;
 }
+
 
 /*Classes para os botoes de opções do usuario na sua tela  */
 .opt{

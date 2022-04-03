@@ -7,6 +7,7 @@
 
     <title>SAQ-Login-Dono</title>
 
+    <link rel="shortcut icon" href="assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css"> 
 </head>

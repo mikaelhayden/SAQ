@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Alterar-Senha</title>    
+    
+    <link rel="shortcut icon" href="assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -27,8 +30,8 @@
     <section class= "corpo">
         <br><br><br>
         <div class="meio2">
-            <form method="POST">
-                <div class="form-loginrelatorio">
+            <form  method="POST">
+                <div class="formupdate">
                     <input type="password" name="Senha_Nova" minlength="9" maxlength="15" required placeholder="Insira uma Nova Senha"><br>
 		            <input type="password" name="confSenha" minlength="9" maxlength="15" required placeholder="Confirmar Nova Senha" > <br> 
                     <button class="buttonoptions" name="update" type="submit">Alterar</button>        
