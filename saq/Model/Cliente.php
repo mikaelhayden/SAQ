@@ -255,7 +255,7 @@ Class Cliente
 					{
 						echo $tabela_reserva;
 						echo "
-        				<div id='bntcancelarreserva'><a id='cancelarreserva' href='../View/TelaCancelarReserva.php'>Cancelar Reserva</a></div>
+        				<div id='bntcancelarreserva'><a id='cancelarreserva' href='../TelasCliente/TelaCancelarReserva.php'>Cancelar Reserva</a></div>
         				</form>";   	        				
           				return true;     				
 					}
@@ -291,6 +291,65 @@ Class Cliente
 		{
 			echo "<div id='erro'><p>Senhas não correspondem!</p></div>";
 		}
+	}
+
+	public function horarios()
+	{		
+		global $pdo;
+			       
+		$sql=$pdo->prepare("SELECT Horario_Inicio_Segunda,
+		Horario_Fim_Segunda,
+		Horario_Inicio_Terca,
+		Horario_Fim_Terca,
+		Horario_Inicio_Quarta,
+		Horario_Fim_Quarta,
+		Horario_Inicio_Quinta,
+		Horario_Fim_Quinta,
+		Horario_Inicio_Sexta,
+		Horario_Fim_Sexta,
+		Horario_Inicio_Sabado,
+		Horario_Fim_Sabado,
+		Horario_Inicio_Domingo,
+		Horario_Fim_Domingo FROM Disponibilidade_quadra"); //Comando sql (Selecionar registro)	SELECT							
+		//Substitui as variáveis
+			
+		$sql->execute(); //Executa o comando o sql e retorna alguma coisa
+
+		$tabela="";
+		if($sql->rowCount()>0)
+		{
+			$tabela = "<font color='black'><center><table border=3>";
+			$tabela.="
+			<tr>				
+				<td>Segunda</td>
+				<td>Terça-Feira</td>
+				<td>Quarta-Feira</td>
+				<td>Quinta-Feira</td>
+				<td>Sexta-Feira</td>
+				<td>Sábado</td>
+				<td>Domingo</td>
+			</tr>";
+			while(list($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta, $H_F_Quarta,
+			$H_I_Quinta, $H_F_Quinta, $H_I_Sexta, $H_F_Sexta, $H_I_Sabado, $H_F_Sabado, $H_I_Domingo, $H_F_Domingo)=$sql->fetch())
+			{					
+            	$tabela.="           			
+		        <tr>
+		            <td>De $H_I_Segunda até ás $H_F_Segunda</td>
+		            <td>De $H_I_Terca até ás $H_F_Terca</td>
+		            <td>De $H_I_Quarta até ás $H_F_Quarta</td>
+					<td>De $H_I_Quinta até ás $H_F_Quinta</td>
+					<td>De $H_I_Sexta até ás $H_F_Sexta</td>
+					<td>De $H_I_Sabado até ás $H_F_Sabado</td>
+					<td>De $H_I_Domingo até ás $H_F_Domingo</td>
+		        </tr>";
+			}
+			$tabela.="</table></font>";
+			if($tabela!="")
+			{
+				echo $tabela;						  	        			   				
+			}					
+		}
+		
 	}
 }
 

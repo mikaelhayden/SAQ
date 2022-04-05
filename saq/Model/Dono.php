@@ -175,7 +175,113 @@ Class Dono
 				return false;
 			}
 		}
-	}						
+	}
+	
+	public function Disponibilizar($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta, $H_F_Quarta,
+	$H_I_Quinta, $H_F_Quinta, $H_I_Sexta, $H_F_Sexta, $H_I_Sabado, $H_F_Sabado, $H_I_Domingo, $H_F_Domingo)
+	{		
+		global $pdo;
+		
+		if($H_I_Segunda == NULL)
+		{
+			$H_I_Segunda = "(Horario nao definido!)";	
+		}
+		if($H_F_Segunda == NULL)
+		{
+			$H_F_Segunda = "(Horario nao definido!)";	
+		}
+
+		if($H_I_Terca == NULL)
+		{
+			$H_I_Terca = "(Horario nao definido!)";	
+		}
+		if($H_F_Terca == NULL)
+		{
+			$H_F_Terca = "(Horario nao definido!)";	
+		}
+
+		if($H_I_Quarta == NULL)
+		{
+			$H_I_Quarta="(Horario nao definido!)";	
+		}
+		if($H_F_Quarta == NULL)
+		{
+			$H_F_Quarta = "Horario nao definido!";	
+		}
+
+		if($H_I_Quinta == NULL)
+		{
+			$H_I_Quinta = "(Horario nao definido!)";	
+		}
+		if($H_F_Quinta == NULL)
+		{
+			$H_F_Quinta = "(Horario nao definido!)";	
+		}
+
+		if($H_I_Sexta == NULL)
+		{
+			$H_I_Sexta = "(Horario nao definido!)";	
+		}
+		if($H_F_Sexta == NULL)
+		{
+			$H_F_Sexta = "(Horario nao definido!)";	
+		}
+
+		if($H_I_Sabado == NULL)
+		{
+			$H_I_Sabado = "(Horario nao definido!)";	
+		}
+		if($H_F_Sabado == NULL)
+		{
+			$H_F_Sabado = "(Horario nao definido!)";	
+		}
+
+		if($H_I_Domingo == NULL)
+		{
+			$H_I_Domingo = "(Horario nao definido!)";	
+		}
+		if($H_F_Domingo == NULL)
+		{
+			$H_F_Domingo = "(Horario nao definido!)";	
+		}
+
+		$sql = $pdo->prepare("UPDATE disponibilidade_quadra SET 
+		Horario_Inicio_Segunda = :hi_s,
+		Horario_Fim_Segunda = :hf_s,
+		Horario_Inicio_Terca = :hi_t,
+		Horario_Fim_Terca = :hf_t,
+		Horario_Inicio_Quarta = :hi_qua,
+		Horario_Fim_Quarta = :hf_qua,
+		Horario_Inicio_Quinta = :hi_qui,
+		Horario_Fim_Quinta= :hf_qui,
+		Horario_Inicio_Sexta = :hi_sex,
+		Horario_Fim_Sexta = :hf_sex,
+		Horario_Inicio_Sabado = :hi_sab,
+		Horario_Fim_Sabado = :hf_sab,
+		Horario_Inicio_Domingo = :hi_d,
+		Horario_Fim_Domingo = :hf_d WHERE ID_Disponibilidade = 1"); //UPDATE
+
+		$sql->bindValue(":hi_s", $H_I_Segunda);
+		$sql->bindValue(":hf_s", $H_F_Segunda);
+		$sql->bindValue(":hi_t", $H_I_Terca);
+		$sql->bindValue(":hf_t", $H_F_Terca);
+		$sql->bindValue(":hi_qua", $H_I_Quarta);
+		$sql->bindValue(":hf_qua", $H_F_Quarta);
+		$sql->bindValue(":hi_qui", $H_I_Quinta);
+		$sql->bindValue(":hf_qui", $H_F_Quinta);
+		$sql->bindValue(":hi_sex", $H_I_Sexta);
+		$sql->bindValue(":hf_sex", $H_F_Sexta);
+		$sql->bindValue(":hi_sab", $H_I_Sabado);
+		$sql->bindValue(":hf_sab", $H_F_Sabado);
+		$sql->bindValue(":hi_d", $H_I_Domingo);
+		$sql->bindValue(":hf_d", $H_F_Domingo);
+		
+		$sql->execute();
+		if($sql->rowCount()>0)
+		{
+			echo "<script> alert('Horário de funcionamento definido!'); </script>";			
+		}		
+	}
 }
 
 ?>
