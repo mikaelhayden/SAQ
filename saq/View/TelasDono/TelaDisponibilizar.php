@@ -34,74 +34,86 @@
             <h1>Informe os horários que a quadra funcionará</h1>
 	        <form method="POST">
                 <div class="form-login">
-                <label><br><b>Segunda-Feira:</label>
-				
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Segunda" maxlength="5"> 
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Segunda" maxlength="5" > <br>
-
-                <label><br>Terça-Feira:</label>
-				
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Terca" maxlength="5"> <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Terca" maxlength="5" > <br>
-				
-                <label><br><b>Quarta-Feira:</label>  
-
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Quarta" maxlength="5" > <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Quarta" maxlength="5" > <br>
-
-                <label><br><b>Quinta-Feira:</label>   
-                         
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Quinta" maxlength="5" > <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Quinta" maxlength="5"> <br>
-
-                <label><br><b>Sexta-Feira:</label>
-                         
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Sexta" maxlength="5"> <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Sexta" maxlength="5" > <br>
-
-                <label><br><b>Sábado:</label>  
-                         
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Sabado" maxlength="5" > <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Sabado" maxlength="5"> <br>
-
-                <label><br><b>Domingo:</label>  
-                         
-                    <h5> Horário de início </h5>            
-                    <input type="time" name="Horario_Inicio_Domingo" maxlength="5" > <br>
-                    <h5> Horário do fim  </h5>     
-                    <input type="time" name="Horario_Fim_Domingo" maxlength="5" > <br>
-                
-                <button class="buttonoptions" name="Definir" type="submit">Definir</button> <br><br>
-
                 <?php
                     //Conecta com os arquivos
                     require_once '../../Controller/Conexao.php';
                     require_once '../../Model/Dono.php';
 
-                    $d = new Dono;
                     $conexao = new Conexao;
+                    $d = new Dono;
 
-                    $conexao->conectar("saq", "localhost", "root", "");
-                        
-                    /* session_start();
+                    session_start();
                     if(!isset($_SESSION['ID_Dono'])) //Se o usuário não estiver logado
                     {
                         header("location: TelaLoginDono.php"); //redirecionar para a tela de login
                         exit; //Não executar mais nada depois disso
-                    }*/
+                    }
 
+                    $conexao->conectar("saq", "localhost", "root", "");
+
+                    global $pdo;
+                    $sql = $pdo->prepare("SELECT Horario_Inicio_Segunda, Horario_Fim_Segunda, 
+                    Horario_Inicio_Terca, Horario_Fim_Terca, Horario_Inicio_Quarta, Horario_Fim_Quarta,
+                    Horario_Inicio_Quinta, Horario_Fim_Quinta, Horario_Inicio_Sexta, Horario_Fim_Sexta,
+                    Horario_Inicio_Sabado, Horario_Fim_Sabado, Horario_Inicio_Domingo, Horario_Fim_Domingo FROM disponibilidade_quadra");
+                    $sql->execute();
+                    list($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta,
+                    $H_F_Quarta, $H_I_Quinta, $H_F_Quinta, $H_I_Sexta, $H_F_Sexta, $H_I_Sabado,
+                    $H_F_Sabado, $H_I_Domingo, $H_F_Domingo)=$sql->fetch();          
+                ?>
+
+                <label><br><b>Segunda-Feira:</label>
+				
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Segunda" maxlength="5" value="<?php echo $H_I_Segunda; ?>"> 
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Segunda" maxlength="5" value="<?php echo $H_F_Segunda; ?>"> <br>
+
+                <label><br>Terça-Feira:</label>
+				
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Terca" maxlength="5" value="<?php echo $H_I_Terca; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Terca" maxlength="5" value="<?php echo $H_F_Terca; ?>"> <br>
+				
+                <label><br><b>Quarta-Feira:</label>  
+
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Quarta" maxlength="5" value="<?php echo $H_I_Quarta; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Quarta" maxlength="5" value="<?php echo $H_F_Quarta; ?>"> <br>
+
+                <label><br><b>Quinta-Feira:</label>   
+                         
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Quinta" maxlength="5" value="<?php echo $H_I_Quinta; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Quinta" maxlength="5" value="<?php echo $H_F_Quinta; ?>"> <br>
+
+                <label><br><b>Sexta-Feira:</label>
+                         
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Sexta" maxlength="5" value="<?php echo $H_I_Sexta; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Sexta" maxlength="5" value="<?php echo $H_F_Sexta; ?>"> <br>
+
+                <label><br><b>Sábado:</label>  
+                         
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Sabado" maxlength="5" value="<?php echo $H_I_Sabado; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Sabado" maxlength="5" value="<?php echo $H_F_Sabado; ?>"> <br>
+
+                <label><br><b>Domingo:</label>  
+                         
+                    <h5> Horário de início </h5>            
+                    <input type="time" name="Horario_Inicio_Domingo" maxlength="5" value="<?php echo $H_I_Domingo; ?>"> <br>
+                    <h5> Horário do fim  </h5>     
+                    <input type="time" name="Horario_Fim_Domingo" maxlength="5" value="<?php echo $H_F_Domingo; ?>"> <br>
+                
+                <button class="buttonoptions" name="Definir" type="submit">Definir</button> <br><br>
+
+                <?php                                                         
                     if(isset($_POST['Definir'])) 
                     {
                         //php recebe os dados do formulário
@@ -124,9 +136,7 @@
                         $H_F_Sabado = addslashes($_POST['Horario_Fim_Sabado']);
 
                         $H_I_Domingo = addslashes($_POST['Horario_Inicio_Domingo']);
-                        $H_F_Domingo = addslashes($_POST['Horario_Fim_Domingo']);
-                        
-                        $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD               
+                        $H_F_Domingo = addslashes($_POST['Horario_Fim_Domingo']);        
 
                         $d->Disponibilizar($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta, $H_F_Quarta,
                         $H_I_Quinta, $H_F_Quinta, $H_I_Sexta, $H_F_Sexta, $H_I_Sabado, $H_F_Sabado, $H_I_Domingo, $H_F_Domingo);  
