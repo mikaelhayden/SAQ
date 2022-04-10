@@ -4,32 +4,33 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAQ-Buscar Relatorios</title>      
+    <title>SAQ-Alterar-Senha</title>      
     <link rel="shortcut icon" href="../assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <div class="text-center">
-        <a class="principal" href="TelaFuncionario.php">
+        <a class="principal" href="TelaDono.php">
             <nav id="cabecario">
                 <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
                 <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
                 <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
                 <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" /> 
             </nav>
         </a>
-        <p>Verificar Relatórios</p> 
-        <a id ='iconevoltar' href="TelaFuncionario.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
+        <p>Atualizar Senha</p> 
+        <a id ='iconevoltar' href="TelaDono.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
     <section class= "corpo">
         <br><br><br>
         <div class="meio2">
-            <form method="POST">
-                <div class="form-loginrelatorio">
-                    <input type="email" id="inputEmail" name="Email_cliente" placeholder="Insira o email do Cliente" maxlength="30" required autofocus> <br>
-                    <input class="buttonoptions" name="verificar" value="Verificar relatórios" type="submit">
+            <form  method="POST">
+                <div class="formupdate">
+                    <input type="password" name="Senha_Nova" minlength="9" maxlength="15" required placeholder="Insira uma Nova Senha"><br>
+		            <input type="password" name="confSenha" minlength="9" maxlength="15" required placeholder="Confirmar Nova Senha" > <br> 
+                    <button class="buttonoptions" name="update" type="submit">Alterar</button>        
                 </div>
             </form> 
         </div>
@@ -37,31 +38,30 @@
         <?php
             //Conecta com os arquivos
             require_once '../../Controller/Conexao.php';
-            require_once '../../Model/Funcionario.php';
+            require_once '../../Model/Dono.php';
                     
             //Instancias      
-            $f = new Funcionario;
+            $d = new Dono;
             $conexao = new Conexao;
 
             $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
 
             session_start();
-            if(!isset($_SESSION['ID_Funcionario']))
+            if(!isset($_SESSION['ID_Dono'])) //Se o usuário não estiver logado
             {
-                header("location: TelaLoginFuncionario.php");
-                exit;
-            }  
+                header("location: TelaLoginDono.php"); //redirecionar para a tela de login
+                exit; //Não executar mais nada depois disso
+            }
             
-            if (isset($_POST['verificar']))
+            if (isset($_POST['update']))
             {
-                $Email_cliente = $_POST['Email_cliente'];
-                //$email_cookie = $_COOKIE['Email_dono'];
-                if($f->relatorios($Email_cliente)==false)
-                {
-                    echo "<div id='erro'><p>Não há reservas de clientes com esse email!</p></div>";
-                }
+                $novaSenha = addslashes($_POST['Senha_Nova']);
+                $confirmarSenha = addslashes($_POST["confSenha"]);
+                $email_cookie = $_COOKIE['Email_dono'];
+                $d->updateSenha($novaSenha, $confirmarSenha, $email_cookie);            
             }
         ?>
+
     </section>   
 </body>
 <footer class="rodape">

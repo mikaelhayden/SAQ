@@ -53,6 +53,7 @@ Class Cliente
 	public function fazerReserva($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $email_cookie)
 	{		
 		global $pdo;
+		
 		$sql=$pdo->prepare("SELECT ID_Reserva FROM horario_reserva WHERE ((:i>=Inicio_Reserva AND :i<Fim_Reserva AND Data_Reserva = :dr) OR (:f>Inicio_Reserva AND :f <=Fim_Reserva AND Data_Reserva = :dr)) OR (:i<Inicio_Reserva AND :f>Fim_Reserva AND Data_Reserva = :dr)"); //Comando sql (consultar horários)
 		$sql->bindValue(":i", $Inicio_Reserva); //Substitui a variável
 		$sql->bindValue(":f", $Fim_Reserva);
@@ -348,9 +349,29 @@ Class Cliente
 			{
 				echo $tabela;						  	        			   				
 			}					
-		}
-		
+		}		
 	}
+
+	public function updateCadastro($nome, $cpf, $telefone, $email_cookie)
+	{		
+		global $pdo;
+		
+		$sql=$pdo->prepare("UPDATE cliente SET Nome_cliente = :n, CPF_Cliente = :cpf, Telefone_cliente = :t WHERE Email_cliente = :ek");
+		$sql->bindValue(":n", $nome);
+		$sql->bindValue(":cpf", $cpf);		
+		$sql->bindValue(":t", $telefone);
+		$sql->bindValue(":ek", $email_cookie);
+		$sql->execute();
+		if($sql->rowCount()>0)
+		{		
+			return true;	
+		}
+		else
+		{
+			return false;
+		}		
+	}
+
 }
 
 ?>

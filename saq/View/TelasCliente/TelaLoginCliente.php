@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Login-Cliente</title>    
-
     <link rel="shortcut icon" href="../assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
     <div class="text-center">
         <a class="principal" href="../../index.html">
@@ -23,7 +21,6 @@
             </nav>
         </a>
     </div>
-
     <section class= "corpo">
     <br><br><br>
         <div class="meio">
@@ -31,11 +28,9 @@
             <form method="POST">
                 <div class="form-login">
                     <input type="email" id="inputEmail" name="Email_cliente"  placeholder="Entre com o email" required autofocus><br>
-
-                    <input type="password" id="inputPassword" name="Senha_cliente" placeholder="Entre com a senha" required><br>
-                
+                    <input type="password" id="inputPassword" name="Senha_cliente" placeholder="Entre com a senha" required><br>                
                     <button class="buttonlogin" name="entrar" type="submit">Entrar</button>
-                    <a id="cadastrese" href="TelaCadastroCliente.php">Cadastre-se</a></abbr> <br><br>
+                    <a id="cadastrese" href="TelaCadastroCliente.html">Cadastre-se</a></abbr> <br><br>
        
                     <?php
                         //Conecta com os arquivos
@@ -68,17 +63,17 @@
                             }
                         }
                     ?>
+
                 </div>
             </form> 
         </div>
         <br><br>
     </section>
-
     <footer class="rodape">
             APP Desenvolvido por
-            <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
-            <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
-            <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
+            <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+            <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+            <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
     </footer>

@@ -36,23 +36,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Dono</title>   
-
     <link rel="shortcut icon" href="../assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">  
     <style>
       .opt{
-    position: relative;
-    width: 450px;
-    height: 130px;
-    margin-top: 20px;
-    text-align: justify;
-}
+            position: relative;
+            width: 450px;
+            height: 130px;
+            margin-top: 20px;
+            text-align: justify;
+        }
     </style>
 </head>
-
 <body>
-     <div class="text-center">
+    <div class="text-center">
         <a class="principal" href="TelaDono.php">
             <nav id="cabecario">
                 <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
@@ -69,44 +67,43 @@
                 list($nome)=$sql->fetch();              	
                 echo"  <div class='informacao'>
                 <div id='texto'>Bem Vindo, $nome</div>
-                <div id='texto'>Área Do Dono</div>
+                <div id='texto'>Área Do Proprietário</div>
                 <div id='texto'>Hoje: $date ás $hora</div>
                 </div>";                  
             }
         ?>
-    </div>   
 
+    </div>   
     <section class= "corpo">
         <br><br><br>
-            
-                <div class="opt">	
-                    <a href="TelaDisponibilizar.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Inserir Dias e Horarios</a>
-                </div>
-
-                <div class="opt">	
-                    <a  href="TelaGroupBy.php"><img src="../assets/img/contador.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
-                </div>
-
-                <div class="opt">	
-                    <a  href="TelaLike.php"><img src="../assets/img/lupa.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
-                </div>
-
-                <div class="opt">	
-                    <a  href="TelaUnion.php"><img src="../assets/img/livro-de-contato.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
-                </div>
-
-                <div class="opt">	
-                    <a  href="../../Model/SairDono.php" ><img src="../assets/img/logout.png" alt="Inserir" width="75"> Sair da Sessão</a> 
-                </div>
-        
+        <div class="opt">	
+            <a href="TelaDefinirHorarios.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Definir Horários de funcionamento</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaGroupBy.php"><img src="../assets/img/contador.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaLike.php"><img src="../assets/img/lupa.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaUnion.php"><img src="../assets/img/livro-de-contato.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaUpdateDados.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Dados</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaUpdateSenha.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
+        </div>
+        <div class="opt">	
+            <a  href="../../Model/SairDono.php" ><img src="../assets/img/logout.png" alt="Inserir" width="75"> Sair da Sessão</a> 
+        </div>  
         <br><br><br>
     </section>
-
     <footer class="rodape">
             APP Desenvolvido por
-            <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
-            <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
-            <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
+            <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+            <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+            <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
     </footer>   

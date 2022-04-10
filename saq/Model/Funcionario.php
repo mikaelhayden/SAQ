@@ -103,7 +103,52 @@ Class Funcionario
 				}
 			}
 		}				
-	}	
+	}
+	
+	public function updateSenha($novaSenha, $confirmarSenha, $email_cookie)
+	{		
+		global $pdo;
+		if ($novaSenha == $confirmarSenha)
+    	{
+			$sql = $pdo->prepare("UPDATE funcionario SET Senha_Funcionario = :sa WHERE Email_Funcionario = :e"); //UPDATE
+			$sql->bindValue(":sa", $novaSenha);
+			$sql->bindValue(":e", $email_cookie);
+			$sql->execute();
+			if($sql->rowCount()>0)
+			{
+				echo "<script> alert('Senha Atualizada, entre com a nova senha!'); window.location.href='TelaLoginFuncionario.php'; </script>";
+			}		
+			else
+			{
+				echo "<div id='erro'><p>Não Foi Possivel Atualizar!</p></div>";	
+			}
+		}
+		else
+		{
+			echo "<div id='erro'><p>Senhas não correspondem!</p></div>";
+		}
+	}
+
+	public function updateCadastro($nome, $telefone, $inicio_expediente, $fim_expediente, $email_cookie)
+	{		
+		global $pdo;
+		
+		$sql=$pdo->prepare("UPDATE funcionario SET Nome_Funcionario = :n, Telefone_Funcionario = :t, Inicio_Expediente = :ie, Fim_Expediente = :fe WHERE Email_Funcionario = :ek");
+		$sql->bindValue(":n", $nome);		
+		$sql->bindValue(":t", $telefone);
+		$sql->bindValue(":ie", $inicio_expediente);
+		$sql->bindValue(":fe", $fim_expediente);
+		$sql->bindValue(":ek", $email_cookie);
+		$sql->execute();
+		if($sql->rowCount()>0)
+		{		
+			return true;	
+		}
+		else
+		{
+			return false;
+		}		
+	}
 } 
 
 ?>

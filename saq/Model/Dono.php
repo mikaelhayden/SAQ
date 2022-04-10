@@ -177,7 +177,7 @@ Class Dono
 		}
 	}
 	
-	public function Disponibilizar($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta, $H_F_Quarta,
+	public function Definir($H_I_Segunda, $H_F_Segunda, $H_I_Terca, $H_F_Terca, $H_I_Quarta, $H_F_Quarta,
 	$H_I_Quinta, $H_F_Quinta, $H_I_Sexta, $H_F_Sexta, $H_I_Sabado, $H_F_Sabado, $H_I_Domingo, $H_F_Domingo)
 	{		
 		global $pdo;
@@ -245,21 +245,11 @@ Class Dono
 			$H_F_Domingo = "(Horario nao definido!)";	
 		}
 
-		$sql = $pdo->prepare("UPDATE disponibilidade_quadra SET 
-		Horario_Inicio_Segunda = :hi_s,
-		Horario_Fim_Segunda = :hf_s,
-		Horario_Inicio_Terca = :hi_t,
-		Horario_Fim_Terca = :hf_t,
-		Horario_Inicio_Quarta = :hi_qua,
-		Horario_Fim_Quarta = :hf_qua,
-		Horario_Inicio_Quinta = :hi_qui,
-		Horario_Fim_Quinta= :hf_qui,
-		Horario_Inicio_Sexta = :hi_sex,
-		Horario_Fim_Sexta = :hf_sex,
-		Horario_Inicio_Sabado = :hi_sab,
-		Horario_Fim_Sabado = :hf_sab,
-		Horario_Inicio_Domingo = :hi_d,
-		Horario_Fim_Domingo = :hf_d WHERE ID_Disponibilidade = 1"); //UPDATE
+		$sql = $pdo->prepare("UPDATE disponibilidade_quadra SET Horario_Inicio_Segunda = :hi_s, Horario_Fim_Segunda = :hf_s,
+		Horario_Inicio_Terca = :hi_t, Horario_Fim_Terca = :hf_t, Horario_Inicio_Quarta = :hi_qua, Horario_Fim_Quarta = :hf_qua,
+		Horario_Inicio_Quinta = :hi_qui, Horario_Fim_Quinta= :hf_qui, Horario_Inicio_Sexta = :hi_sex,
+		Horario_Fim_Sexta = :hf_sex, Horario_Inicio_Sabado = :hi_sab, Horario_Fim_Sabado = :hf_sab,
+		Horario_Inicio_Domingo = :hi_d, Horario_Fim_Domingo = :hf_d WHERE ID_Disponibilidade = 1"); //UPDATE
 
 		$sql->bindValue(":hi_s", $H_I_Segunda);
 		$sql->bindValue(":hf_s", $H_F_Segunda);
@@ -274,13 +264,62 @@ Class Dono
 		$sql->bindValue(":hi_sab", $H_I_Sabado);
 		$sql->bindValue(":hf_sab", $H_F_Sabado);
 		$sql->bindValue(":hi_d", $H_I_Domingo);
-		$sql->bindValue(":hf_d", $H_F_Domingo);
-		
+		$sql->bindValue(":hf_d", $H_F_Domingo);	
 		$sql->execute();
 		if($sql->rowCount()>0)
 		{
-			echo "<script> alert('Horário de funcionamento definido!'); </script>";			
+			echo "<script> alert('Horário de funcionamento definido!'); window.location.href='../View/TelasDono/TelaDefinirHorarios.php'; </script>";			
+		}
+		else
+		{
+			echo "<script> window.location.href='../View/TelasDono/TelaDefinirHorarios.php'; </script>";
 		}		
+	}
+
+	public function updateSenha($novaSenha, $confirmarSenha, $email_cookie)
+	{		
+		global $pdo;
+		if ($novaSenha == $confirmarSenha)
+    	{
+			$sql = $pdo->prepare("UPDATE dono SET Senha_dono = :sa WHERE Email_dono = :e"); //UPDATE
+			$sql->bindValue(":sa", $novaSenha);
+			$sql->bindValue(":e", $email_cookie);
+			$sql->execute();
+			if($sql->rowCount()>0)
+			{
+				echo "<script> alert('Senha Atualizada, entre com a nova senha!'); window.location.href='TelaLoginDono.php'; </script>";
+			}		
+			else
+			{
+				echo "<div id='erro'><p>Não Foi Possivel Atualizar!</p></div>";	
+			}
+		}
+		else
+		{
+			echo "<div id='erro'><p>Senhas não correspondem!</p></div>";
+		}
+	}
+
+	public function updateCadastro($nome, $cpf, $email, $telefone, $nome_quadra, $email_cookie)
+	{		
+		global $pdo;
+
+		$sql=$pdo->prepare("UPDATE dono SET Nome_dono = :n, CPF_dono = :cpf, Email_dono = :e, Telefone_dono = :t, Nome_quadra = :nq WHERE Email_dono = :ek");
+		$sql->bindValue(":n", $nome);
+		$sql->bindValue(":cpf", $cpf);
+		$sql->bindValue(":e", $email);
+		$sql->bindValue(":t", $telefone);
+		$sql->bindValue(":nq", $nome_quadra);
+		$sql->bindValue(":ek", $email_cookie);
+		$sql->execute();
+		if($sql->rowCount()>0)
+		{
+			return true;
+		}
+		else
+		{		
+			return false;
+		}
 	}
 }
 

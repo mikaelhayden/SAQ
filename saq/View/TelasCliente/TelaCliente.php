@@ -36,12 +36,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAQ-Cliente</title>    
-
     <link rel="shortcut icon" href="../assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
     <div class="text-center">
         <a class="principal" href="TelaCliente.php">
@@ -62,38 +60,46 @@
                 <div id='texto'>Bem Vindo, $nome</div>
                 <div id='texto'>Área Do Cliente</div>
                 <div id='texto'>Hoje: $date ás $hora</div>
-        </div>";          
+                </div>";          
             }
         ?>
 
     </div>
     <section class= "corpo">
         <br><br>
-            <div class="opt"> 
-                <a href="TelaFazerReserva.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75">   Fazer Reserva</a>
-            </div>
-            <div class="opt"> 
-                <a href="TelaMinhasReservas.php"><img src="../assets/img/lupa.png" alt="Inserir" width="75">   Minhas Reserva</a>  <br>
-            </div>
-            <div class="opt"> 
-                <a href="TelaMeusRelatoriosReservas.php"><img src="../assets/img/tabela-de-edicao.png" alt="Inserir" width="75">   Relatórios de aluguel</a>  
-            </div>
-            <div class="opt">	
-                    <a  href="TelaUpdateSenha.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
-            </div>
-            <div class="opt"> 
-                <a href="../../Model/SairCliente.php"><img src="../assets/img/logout.png" alt="Inserir" width="75">   Encerrar Sessão</a>
-            </div>
+        <div class="opt"> 
+            <a href="TelaFazerReserva.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Fazer Reserva</a>
+        </div>
+        <div class="opt"> 
+            <a href="TelaMinhasReservas.php"><img src="../assets/img/lupa.png" alt="Inserir" width="75"> Minhas Reserva</a>  <br>
+        </div>
+        <div class="opt"> 
+            <a href="TelaMeusRelatoriosReservas.php"><img src="../assets/img/tabela-de-edicao.png" alt="Inserir" width="75"> Relatórios de aluguel</a>  
+        </div>
+        <div class="opt">	
+            <a  href="TelaUpdateDados.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Dados</a>
+        </div>
+        <div class="opt">	
+            <a  href="TelaUpdateSenha.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
+        </div>
+        <div class="opt"> 
+            <a href="../../Model/SairCliente.php"><img src="../assets/img/logout.png" alt="Inserir" width="75"> Encerrar Sessão</a>
+        </div>
+        <div class="opt"> 
+            <form method="POST" action="../../Model/RemoverConta.php">
+                <input type="hidden" name="Email_cliente" value="<?php echo $email_cookie; ?>">
+                <button name="Remover_Cliente" type="submit"> Remover Conta</button>
+            </form>
+        </div>        
         <br>    
     </section>
 </body>
-
 <footer class="rodape">
-            APP Desenvolvido por
-            <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
-            <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
-            <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
-            <i class="bi bi-diamond-half"></i>
-            <i class="bi bi-diamond-half"></i>
+    APP Desenvolvido por
+    <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+    <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+    <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+    <i class="bi bi-diamond-half"></i>
+    <i class="bi bi-diamond-half"></i>
 </footer>
 </html>
