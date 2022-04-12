@@ -25,7 +25,7 @@
     </div>    
     <section class= "corpo">
     <br><br><br>
-        <div class="mid">
+        <div class="middados">
             
             <form method="POST" action="../../Model/UpdateDados.php">
                 <div class="form-login">
@@ -50,16 +50,22 @@
                         list($Nome_cliente, $Email_cliente, $CPF_Cliente, $Telefone_cliente)=$sql->fetch();          
                     ?>
 
-                    <label>Nome</label><br>
+                    <h3>Nome</h3>
                     <input type="text" id="inputNome" name="Nome_cliente" placeholder="Nome Completo" maxlength="30" value="<?php echo $Nome_cliente; ?>" required autofocus><br>
-                    <label>CPF</label><br>
+
+                    <h3>CPF</h3>
                     <input type="number_format" id="inputCPF" name="CPF_Cliente" placeholder="CPF" maxlength="11" value="<?php echo $CPF_Cliente; ?>" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" required><br>
-                    <label>Telefone</label><br>
+
+                    <h3>Telefone</h3>
                     <input type="tel" id="inputTelefone" name="Telefone_cliente" placeholder="Telefone" maxlength="11" value="<?php echo $Telefone_cliente; ?>" pattern="\d{11}" required> <br>
                     <input type="hidden" name="Email_cliente" value="<?php echo $email_cookie; ?>">                  
                     <button class="buttonoptions" name="Atualizar_Cliente" type="submit">Atualizar</button> <br> <br>
-        
+                    
                 </div>
+            </form>
+            <form class="updatecliente" method="POST" action="../../Model/RemoverConta.php">
+                <input type="hidden" name="Email_cliente" value="<?php echo $email_cookie; ?>">
+                <button class="buttonremover" name="Remover_Cliente" type="submit"> Remover Conta</button>
             </form>
         </div>
     <br><br><br>

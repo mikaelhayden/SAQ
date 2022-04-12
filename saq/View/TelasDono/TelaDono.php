@@ -39,15 +39,8 @@
     <link rel="shortcut icon" href="../assets/img/futebol (1).png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">  
-    <style>
-      .opt{
-            position: relative;
-            width: 450px;
-            height: 130px;
-            margin-top: 20px;
-            text-align: justify;
-        }
-    </style>
+    
+    
 </head>
 <body>
     <div class="text-center">
@@ -76,27 +69,43 @@
     </div>   
     <section class= "corpo">
         <br><br><br>
-        <div class="opt">	
-            <a href="TelaDefinirHorarios.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Definir Horários de funcionamento</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaGroupBy.php"><img src="../assets/img/contador.png" alt="Inserir" width="75"> Quantidade de reservas de cada dia</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaLike.php"><img src="../assets/img/lupa.png" alt="Inserir" width="75"> Pesquisar clientes por letras</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaUnion.php"><img src="../assets/img/livro-de-contato.png" alt="Inserir" width="75"> Contato dos clientes e funcionários</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaUpdateDados.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Dados</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaUpdateSenha.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
-        </div>
-        <div class="opt">	
-            <a  href="../../Model/SairDono.php" ><img src="../assets/img/logout.png" alt="Inserir" width="75"> Sair da Sessão</a> 
+        <div class="opt_centralizar">	
+            <div class="opt">
+                <a href="TelaDefinirHorarios.php"><img src="../assets/img/reservado.png" alt="Inserir" width="55  "> Definir Horários de funcionamento</a>
+            </div>
+
+            <div class="opt">    
+                <a  href="TelaGroupBy.php"><img src="../assets/img/contadordia.png" alt="Inserir" width="55">  Quantidade de reservas de cada dia</a>
+            </div>
+
+        
+        
+            <div class="opt">
+                <a  href="TelaLike.php"><img src="../assets/img/lupa.png" alt="Inserir" width="50"> Pesquisar clientes por letras</a>
+            </div>
+        
+            <div class="opt_central">	
+                <div class="opt">
+                    <a  href="TelaUnion.php"><img src="../assets/img/livro-de-contato.png" alt="Inserir" width="50"><p id="op_cntt"> Contato dos clientes e funcionários</p></a>
+                </div>
+
+            </div>
+           
+    
+            <div class="opt">
+                <a  href="TelaUpdateDados.php"><img src="../assets/img/gear.png" alt="Inserir" width="55"> Alterar Dados</a>
+            </div>
+
+            <div class="opt">
+                <a  href="TelaUpdateSenha.php"><img src="../assets/img/mostrar-senha.png" alt="Inserir" width="55"> Alterar Senha</a>
+            </div>
+	
+            <div class="opt">
+                <a  href="../../Model/SairDono.php" ><img src="../assets/img/log-out.png" alt="Inserir" width="55"> Sair da Sessão</a> 
+            </div>
+            
         </div>  
+
         <br><br><br>
     </section>
     <footer class="rodape">

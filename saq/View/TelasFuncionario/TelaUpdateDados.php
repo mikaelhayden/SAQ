@@ -52,18 +52,26 @@
                         list($Nome_Funcionario, $Telefone_Funcionario, $Inicio_Expediente, $Fim_Expediente)=$sql->fetch();          
                     ?>
 
-                    <label> Nome </label><br>
-                    <input type="text" id="inputNome" name="Nome_Funcionario" placeholder="Nome Completo" maxlength="30" value="<?php echo $Nome_Funcionario; ?>" required autofocus><br>               
-                    <label> Telefone </label><br>
+                    <h3>Nome</h3>
+                    <input type="text" id="inputNome" name="Nome_Funcionario" placeholder="Nome Completo" maxlength="30" value="<?php echo $Nome_Funcionario; ?>" required autofocus><br>     
+
+                    <h3>Telefone</h3>  
                     <input type="tel" id="inputTelefone" name="Telefone_Funcionario"  placeholder="Telefone" maxlength="11" value="<?php echo $Telefone_Funcionario; ?>" pattern="\d{11}" required><br>
-                    <label> Inicio de Expediente </label><br>
+
+                    <h3>Inicio Expediente</h3>  
                     <input type="time" name="Inicio_Expediente" value="<?php echo $Inicio_Expediente; ?>" pattern="\d{11}" required><br>
-                    <label> Fim de Expediente </label><br>
-                    <input type="time" name="Fim_Expediente" value="<?php echo $Fim_Expediente; ?>" pattern="\d{11}" required><br>                
+
+                    <h3>Fim Expediente</h3>
+                    <input type="time" name="Fim_Expediente" value="<?php echo $Fim_Expediente; ?>" pattern="\d{11}" required><br>  
+                                  
                     <input type="hidden" name="Email_Funcionario" value="<?php echo $email_cookie; ?>">
-                    <button class="buttonoptions" name="Atualizar_Funcionario" type="submit">Atualizar</button> <br> <br>           
+                    <button class="buttonoptions" name="Atualizar_Funcionario" type="submit">Atualizar</button> <br> <br>     
                 </div>
             </form>
+            <form class="updatefuncionario" method="POST" action="../../Model/RemoverConta.php">
+                <input type="hidden" name="Email_Funcionario" value="<?php echo $email_cookie; ?>">
+                <button class="buttonremover" name="Remover_Funcionario" type="submit"> Remover Conta</button>
+            </form>      
         </div>
     <br><br><br>
     </section>

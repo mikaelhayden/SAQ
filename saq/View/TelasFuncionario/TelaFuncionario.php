@@ -67,23 +67,20 @@
     </div>
     <section class= "corpo">
         <br><br><br>
-        <div class="opt">   
-            <a href="TelaBuscarRelatorios.php" ><img src="../assets/img/lupa.png" alt="Inserir" width="65">   Relatórios de Aluguel</a> 
-        </div>
-        <div class="opt">	
-            <a  href="TelaUpdateDados.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Dados</a>
-        </div>
-        <div class="opt">	
-            <a  href="TelaUpdateSenha.php"><img src="../assets/img/reserva.png" alt="Inserir" width="75"> Alterar Senha</a>
-        </div>
-        <div class="opt">   
-            <a href="../../Model/SairFuncionario.php"><img src="../assets/img/logout.png" alt="Inserir" width="75">   Encerrar Sessão</a>
-        </div>
-        <div class="opt"> 
-            <form method="POST" action="../../Model/RemoverConta.php">
-                <input type="hidden" name="Email_Funcionario" value="<?php echo $email_cookie; ?>">
-                <button name="Remover_Funcionario" type="submit"> Remover Conta</button>
-            </form>
+        <div class="opt_centralizar">
+            <div class="opt">   
+                <a href="TelaBuscarRelatorios.php" ><img src="../assets/img/lupa.png" alt="Inserir" width="55">   Relatórios de Aluguel</a> 
+            </div>
+            <div class="opt">	
+                <a  href="TelaUpdateDados.php"><img src="../assets/img/gear.png" alt="Inserir" width="55"> Alterar Dados</a>
+            </div>
+            <div class="opt">	
+                <a  href="TelaUpdateSenha.php"><img src="../assets/img/mostrar-senha.png" alt="Inserir" width="55"> Alterar Senha</a>
+            </div>
+            <div class="opt">   
+                <a href="../../Model/SairFuncionario.php"><img src="../assets/img/log-out.png" alt="Inserir" width="55">   Encerrar Sessão</a>
+            </div>
+        
         </div>
         <br><br><br>
     </section>

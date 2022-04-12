@@ -28,7 +28,7 @@
         <div class="meio2">
             <form method="POST">
                 <div class="form-loginrelatorio">
-                    <input type="text" id="inputEmail" name="letra" placeholder="Insira a inicial do nome desejado" maxlength="1" required autofocus> <br>
+                    <input type="text" id="inputEmail" name="letra" placeholder="Insira a inicial do nome" maxlength="1" required autofocus> <br>
                     <input class="buttonoptions" name="buscar" value="Buscar" type="submit">
                 </div>
             </form> 

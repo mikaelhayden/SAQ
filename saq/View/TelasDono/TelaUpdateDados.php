@@ -54,15 +54,19 @@
                         list($Nome_dono, $Email_dono, $CPF_dono, $Telefone_dono, $Nome_quadra)=$sql->fetch();          
                     ?>
 
-                    <label> Nome </label><br>
+                    <h3>Nome</h3>
                     <input type="text" id="inputNome" name="Nome_dono"  placeholder="Nome Completo" maxlength="30" value="<?php echo $Nome_dono; ?>" required autofocus><br>
-                    <label> Email </label><br>
+
+                    <h3>Email</h3> 
                     <input type="email" id="inputEmail" name="Email_dono"  placeholder="Email" maxlength="30" value="<?php echo $Email_dono; ?>" required autofocus><br>
-                    <label> CPF </label><br>
+
+                    <h3>CPF</h3> 
                     <input type="number_format" id="inputCPF" name="CPF_dono"  placeholder="CPF" maxlength="11" value="<?php echo $CPF_dono; ?>" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" required><br>
-                    <label> Telefone </label><br>
+
+                    <h3>Telefone</h3> 
                     <input type="tel" id="inputTelefone" name="Telefone_dono"  placeholder="Telefone" maxlength="11" value="<?php echo $Telefone_dono; ?>" pattern="\d{11}" required><br> 
-                    <label> Nome da Quadra </label><br>
+
+                    <h3>Nome Da Quadra</h3> 
                     <input type="text" id="inputNomeQuadra" name="Nome_quadra"  placeholder="Nome da Quadra Esportiva" value="<?php echo $Nome_quadra; ?>" maxlength="30" required autofocus><br>
                     
                     <button class="buttonoptions" name="Atualizar_Dono" type="submit">Atualizar</button> <br> <br>

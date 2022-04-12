@@ -25,7 +25,7 @@
 		}
     }
 
-    if(isset($_POST['Remover_Funcionario']))
+    else if(isset($_POST['Remover_Funcionario']))
     {                         
         $email = addslashes($_POST["Email_Funcionario"]);
 
