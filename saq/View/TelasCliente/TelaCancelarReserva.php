@@ -30,10 +30,10 @@
     <?php
          //Conecta com os arquivos
         require_once '../../Controller/Conexao.php';
-        require_once '../../Model/Cliente.php';
+        require_once '../../Model/HorarioReserva.php';
                 
         //Instancias
-        $c = new Cliente;
+        $hr = new HorarioReserva;
         $conexao = new Conexao;
 
         $conexao->conectar("saq", "localhost", "root", ""); //Conecta com BD
@@ -46,7 +46,7 @@
         }  
                
         $email_cookie = $_COOKIE['Email_cliente'];
-        if($c->deleteReserva($email_cookie)==false)
+        if($hr->deleteReserva($email_cookie)==false)
         {
             echo "<h2>Você não fez nenhuma reserva! </h2>";
         }

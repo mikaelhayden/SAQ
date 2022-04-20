@@ -43,10 +43,10 @@
                     <?php
                         //Conecta com os arquivos
                         require_once '../../Controller/Conexao.php';
-                        require_once '../../Model/Cliente.php';
+                        require_once '../../Model/HorarioReserva.php';
                 
                         //Instancias
-                        $c = new Cliente;
+                        $hr = new HorarioReserva;
                         $conexao = new Conexao;
 
                         session_start();
@@ -75,7 +75,7 @@
                                         if($Inicio_Reserva != $Fim_Reserva) //Verifica se o inicio da reserva não é o mesmo que o fim da reserva
                                         {                           
                                             $email_cookie = $_COOKIE['Email_cliente'];
-                                            if($c->fazerReserva($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $email_cookie)) //Se a função "solicitarReserva" retornar "true"
+                                            if($hr->fazerReserva($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $email_cookie)) //Se a função "solicitarReserva" retornar "true"
                                             {
                                                 echo "<div id='sucesso'><center>Reserva realizada! <script> alert('Reserva realizada com sucesso! </script></div><br><abbr title='Clique Para Visualizar Suas Reservas'><a id='iconerelatorio' href='TelaMeusRelatoriosReservas.php'><img src='../assets/img/olho.png' width='37' alt='Voltar'></a><br></abbr>"; //Aparece na tela
                                             }

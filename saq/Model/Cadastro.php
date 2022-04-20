@@ -47,7 +47,7 @@
 
     else if(isset($_POST['cadastrar_funcionario'])) //Se o usuário clicar no botão "cadastrar"
     {
-        //PHP recebe os seguintes dados via formulário
+        //PHP recebe os seguintes dados via formulário programador123 Flamenguista123@
         $nome = addslashes($_POST["Nome_Funcionario"]);
         $email = addslashes($_POST['Email_Funcionario']);
         $telefone = addslashes($_POST['Telefone_Funcionario']);
