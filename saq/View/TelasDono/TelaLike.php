@@ -11,25 +11,21 @@
 </head>
 <body>
     <div class="text-center">
-        <a class="principal" href="TelaDono.php">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />      
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
-        <p>Pesquisar Clientes por letras</p> 
-        <a id ='iconevoltar' href="TelaDono.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
+    </div>
+
     </div>
     <section class= "corpo">
-        <br><br><br>
-        <div class="meio2">
+        <div class="login">
             <form method="POST">
-                <div class="form-loginrelatorio">
-                    <input type="text" id="inputEmail" name="letra" placeholder="Insira a inicial do nome" maxlength="1" required autofocus> <br>
-                    <input class="buttonoptions" name="buscar" value="Buscar" type="submit">
+                <h1>Pesquisar Cliente</h1>
+                <div >
+                    <input class="caixa__login-input" type="text" id="inputEmail" name="letra" placeholder="Insira a inicial do nome" maxlength="1" required autofocus> 
+                    <button class="entrar" type="submit" name="buscar" value="buscar">buscar</button>
                 </div>
             </form> 
         </div>
@@ -65,11 +61,11 @@
     </section>   
 </body>
 <footer class="rodape">
-    APP Desenvolvido por
-        <a href="https://github.com/WALTER-OBS-DEBUG">Walter Jonas,</a>
-        <a href="https://github.com/AntonyGuzma">Antony Gusmão,</a>
-        <a href="https://github.com/mikaelhayden">e Mikael Hayden &copy;</a>
+        APP Desenvolvido por
+        <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+        <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+        <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
         <i class="bi bi-diamond-half"></i>
         <i class="bi bi-diamond-half"></i>
-</footer>
+</footer>   
 </html>

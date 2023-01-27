@@ -44,75 +44,74 @@
 </head>
 <body>
     <div class="text-center">
-        <a class="principal" href="TelaDono.php">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />     
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
+    </div>
 
         <?php
             if($sql->rowCount()>0)
             {
                 list($nome)=$sql->fetch();              	
-                echo"  <div class='informacao'>
-                <div id='texto'>Bem Vindo, $nome</div>
-                <div id='texto'>Área Do Proprietário</div>
-                <div id='texto'>Hoje: $date ás $hora</div>
+                echo"<div class='informacao'>
+                <div >Bem Vindo, $nome</div>
+                <div >Área Do Proprietário</div>
+                <div>$date ás $hora </div>
                 </div>";                  
             }
         ?>
 
     </div>   
+
     <section class= "corpo">
-        <br><br><br>
         <div class="opt_centralizar">	
             <div class="opt">
-                <a href="TelaDefinirHorarios.php"><img src="../assets/img/reservado.png" alt="Inserir" width="55  "> Definir Horários de funcionamento</a>
+                <img src="../assets/img/reservado.png" alt="Inserir" width="30">
+                <a href="TelaDefinirHorarios.php">Definir Horários de funcionamento</a>
             </div>
 
             <div class="opt">    
-                <a  href="TelaGroupBy.php"><img src="../assets/img/contadordia.png" alt="Inserir" width="55">  Quantidade de reservas de cada dia</a>
+                <img src="../assets/img/contadordia.png" alt="Inserir" width="30">
+                <a  href="TelaGroupBy.php">Quantidade de reservas de cada dia</a>
             </div>
-
-        
         
             <div class="opt">
-                <a  href="TelaLike.php"><img src="../assets/img/lupa.png" alt="Inserir" width="50"> Pesquisar clientes por letras</a>
+                <img src="../assets/img/lupa.png" alt="Inserir" width="30">
+                <a  href="TelaLike.php">Pesquisar clientes por letras</a>
             </div>
         
-            <div class="opt_central">	
-                <div class="opt">
-                    <a  href="TelaUnion.php"><img src="../assets/img/livro-de-contato.png" alt="Inserir" width="50"><p id="op_cntt"> Contato dos clientes e funcionários</p></a>
-                </div>
-
+        	
+            <div class="opt">
+                <img src="../assets/img/livro-de-contato.png" alt="Inserir" width="30">
+                <a  href="TelaUnion.php">Contato dos clientes e funcionários</a>
             </div>
+
            
-    
             <div class="opt">
-                <a  href="TelaUpdateDados.php"><img src="../assets/img/gear.png" alt="Inserir" width="55"> Alterar Dados</a>
+                <img src="../assets/img/gear.png" alt="Inserir" width="30">
+                <a  href="TelaUpdateDados.php">Alterar Dados</a>
             </div>
 
             <div class="opt">
-                <a  href="TelaUpdateSenha.php"><img src="../assets/img/mostrar-senha.png" alt="Inserir" width="55"> Alterar Senha</a>
+                <img src="../assets/img/mostrar-senha.png" alt="Inserir" width="30">
+                <a  href="TelaUpdateSenha.php">Alterar Senha</a>
             </div>
 	
             <div class="opt">
-                <a  href="../../Model/SairDono.php" ><img src="../assets/img/log-out.png" alt="Inserir" width="55"> Sair da Sessão</a> 
+                <img src="../assets/img/log-out.png" alt="Inserir" width="30">
+                <a  href="../../Model/SairDono.php">Sair da Sessão</a> 
             </div>
             
         </div>  
-
-        <br><br><br>
     </section>
+
     <footer class="rodape">
             APP Desenvolvido por
-            <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
-            <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
-            <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+            <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+            <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+            <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
     </footer>   

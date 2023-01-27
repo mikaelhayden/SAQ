@@ -10,27 +10,16 @@
     <link rel="stylesheet" href="../assets/css/style.css">  
 </head>
 <body>
-<div class="text-center">
-        <a class="principal" href="TelaDono.php">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />     
+    <div class="text-center">
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
-        </a>  
-        <p>Disponibilizar Horários</p> 
-        <a id ='iconevoltar' href="TelaDono.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
+        </a>
     </div>
 
     <section class="corpo">
-        <br><br><br>
-        <p id="titulo">Informe os Horários Que a Quadra Funcionará</p>
-        <div>  <!--Tirei a class mid pra estilizar uma nova  -->
-	        <form method="POST" action="../../Model/DefinirHorarios.php">
-                <div class="form-login">
-                    <div class="meio_dono">
+	        <form class="tabelas" method="POST" action="../../Model/DefinirHorarios.php">
                         <?php
                             //Conecta com os arquivos
                             require_once '../../Controller/Conexao.php';
@@ -57,77 +46,74 @@
                             $H_I_Sexta, $H_F_Sexta, $H_I_Sabado, $H_F_Sabado, $H_I_Domingo, $H_F_Domingo)=$sql->fetch();          
                         ?>
 
-                        <div class="tabeladias">
-                            <h1 class="dias">Segunda-Feira</h1>
+                        <div class="dias">
+                            <h1>Segunda-Feira</h1>
                             <h5> Horário de início </h5>            
                             <input type="time" name="Horario_Inicio_Segunda" maxlength="5" value="<?php echo $H_I_Segunda; ?>"> 
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Segunda" maxlength="5" value="<?php echo $H_F_Segunda; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Segunda" maxlength="5" value="<?php echo $H_F_Segunda; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                            <h1 class="dias">Terça-Feira</h1>		
+                        <div class="dias">
+                            <h1>Terça-Feira</h1>		
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Terca" maxlength="5" value="<?php echo $H_I_Terca; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Terca" maxlength="5" value="<?php echo $H_I_Terca; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Terca" maxlength="5" value="<?php echo $H_F_Terca; ?>"> <br>				
+                            <input type="time" name="Horario_Fim_Terca" maxlength="5" value="<?php echo $H_F_Terca; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                        <h1 class="dias">Quarta-Feira</h1> 
+                        <div class="dias">
+                        <h1>Quarta-Feira</h1> 
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Quarta" maxlength="5" value="<?php echo $H_I_Quarta; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Quarta" maxlength="5" value="<?php echo $H_I_Quarta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Quarta" maxlength="5" value="<?php echo $H_F_Quarta; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Quarta" maxlength="5" value="<?php echo $H_F_Quarta; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                        <h1 class="dias">Quinta-Feira</h1>                     
+                        <div class="dias">
+                        <h1>Quinta-Feira</h1>                     
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Quinta" maxlength="5" value="<?php echo $H_I_Quinta; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Quinta" maxlength="5" value="<?php echo $H_I_Quinta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Quinta" maxlength="5" value="<?php echo $H_F_Quinta; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Quinta" maxlength="5" value="<?php echo $H_F_Quinta; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                        <h1 class="dias">Sexta  -Feira</h1>                    
+                        <div class="dias">
+                        <h1>Sexta-Feira</h1>                    
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Sexta" maxlength="5" value="<?php echo $H_I_Sexta; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Sexta" maxlength="5" value="<?php echo $H_I_Sexta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Sexta" maxlength="5" value="<?php echo $H_F_Sexta; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Sexta" maxlength="5" value="<?php echo $H_F_Sexta; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                        <h1 class="dias">Sábado-Feira</h1>                       
+                        <div class="dias">
+                        <h1>Sábado</h1>                       
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Sabado" maxlength="5" value="<?php echo $H_I_Sabado; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Sabado" maxlength="5" value="<?php echo $H_I_Sabado; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Sabado" maxlength="5" value="<?php echo $H_F_Sabado; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Sabado" maxlength="5" value="<?php echo $H_F_Sabado; ?>">
                         </div>
 
-                        <div class="tabeladias">
-                        <h1 class="dias">Domingo</h1>                     
+                        <div class="dias">
+                        <h1>Domingo</h1>                     
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Domingo" maxlength="5" value="<?php echo $H_I_Domingo; ?>"> <br>
+                            <input type="time" name="Horario_Inicio_Domingo" maxlength="5" value="<?php echo $H_I_Domingo; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Domingo" maxlength="5" value="<?php echo $H_F_Domingo; ?>"> <br>
+                            <input type="time" name="Horario_Fim_Domingo" maxlength="5" value="<?php echo $H_F_Domingo; ?>">
                         </div>
-                    </div>
-                </div>
-                <div id="buttondono">
-                    <button class="buttonoptions" name="Definir" type="submit">Definir</button> <br><br>           
+                <div>
+                    <button name="Definir" type="submit">Definir</button>          
                 </div>
             </form>
-        </div>
-        <br><br><br>
     </section>
+
     <footer class="rodape">
-        APP Desenvolvido por
-        <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
-        <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
-        <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
-        <i class="bi bi-diamond-half"></i>
-        <i class="bi bi-diamond-half"></i>
-    </footer>
+            APP Desenvolvido por
+            <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+            <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+            <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+            <i class="bi bi-diamond-half"></i>
+            <i class="bi bi-diamond-half"></i>
+    </footer>   
 </body>
 </html>

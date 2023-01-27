@@ -9,32 +9,35 @@ agora ele fica apenas embaixo sem atrapalhar a página - hayden
 */
 @charset "utf-8";
 
-html, body{
-    height: 100%;
+body{
+    height: 100vh;
+    width: 100vw;
 	margin: 0;
 	padding: 0;
-    background-image: linear-gradient(#3EF079, rgb(24, 25, 21));
 }
-
 
 body {
     display: flex;
+    min-width: 420px;
 	flex-direction: column;
+    justify-content: center;
 }
 
 div.text-center{
-    border: 10px;
-    background-color:  #3EF079;
-    border-bottom: 4px solid rgb(24, 25, 21);
-    
+    height: 15%;
+    margin: auto;
+    margin-left: 1%;
+    background-color:  #ffffff;
 }
 
-#cabecario
-{
-    padding: 20px 0px 20px 0px;
-    text-align: center;
-    height: 25vh;
+.cabecario{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
+
 /*Animação das Bolas*/
 @keyframes bolas{
     from{
@@ -46,18 +49,18 @@ div.text-center{
     }
 }
 
-nav > img:hover{
+nav > div > img:hover{
     animation: bolas 2s linear infinite ;
 }
 /*Animação das Bolas*/
 
 .informacao{
-
     display: flex;
     align-items: center;
+    background-color: #fff;
     justify-content: space-around;    
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     color: rgb(24, 25, 21);
 }
 .text-center > p{
@@ -67,8 +70,6 @@ nav > img:hover{
 }
 
 h1{
-    padding-top: 10px;
-    padding-bottom: -10px;
     font-size: 17pt;
     font-family: 'Courie', monospace;
     color: #3EF079;
@@ -76,10 +77,12 @@ h1{
 
 h2
 {
-    Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    font-size: 43px;
+    font-family: serif;
+    font-size: 24px;
     font-weight: 600;
-    color: rgb(24, 25, 21);
+    color: #000000;
+    margin: 0%;
+    margin-left: 3px;
 }
 
 h5
@@ -92,22 +95,12 @@ h5
 }
 
 h3{
-    padding-top: 10px;
-    padding-bottom: -10px;
     font-size: 17pt;
     font-family: 'Courie', monospace;
     color: black;
+    margin: 0%;
     }
 
-.corpo
-{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-	flex: 1 0 auto;
-    background-image: linear-gradient(#3EF079, rgb(24, 25, 21));
-}
 
 div.mid
 {
@@ -148,75 +141,141 @@ div.middados
     border: 4px solid #3EF079;
 }
 
-/*Cabeçalho link para o index*/
-a.principal
-{
-    text-decoration: none;
-}
-
 /*Opções de cadastro*/
 
-/*Opcoes de Login da tela index*/
+.corpo{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#ffffff, rgb(24, 25, 21));
+}
+
 div.meio   
 {
     text-align: center;
-    background-color: rgb(24, 25, 21);
-    width: 600px;
-    height:350px;
-    margin: auto;
+    background: rgba(0, 0, 0, 0.685);
+    width: 70%;
+    margin-bottom: 5%;
+    max-width: 480px;
     padding-bottom: 20px;
     padding-top: 20px;
     border-radius: 10px;
     border: 4px solid #3EF079;
 }
 
-div.meio2   /*MEIO Pequeno*/
-{
-    background-color: rgb(24, 25, 21);
-    width: 450px;
-    height:200px;
-    margin-left: 50%;
-    transform: translate(-50%);
-    margin-bottom: 10px;
+.option{
+    background-color: rgba(20, 20, 20, 0.773);
+    width: 35%;
+    border: 2px solid #3EF079;
+    padding: 5px;
+    margin: 8px 0px;
+}
+
+.option:hover, .option a{
+    color: #3EF079;
+    transform: translateX(5px) translate(5px);
+    box-shadow: #3EF079 7px 9px 0px;
+    transition: 0.5s;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Opcoes de Login da tela index*/
+
+/*Login Tela Dono*/
+.login{
+    text-align: center;
+    width: 70%;
+    max-width: 365px;
     padding-bottom: 20px;
-    padding-top: 13px;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.685);
+    box-sizing: border-box;
+    box-shadow: 0 15px 15px #0f0f0fa3;
     border-radius: 10px;
-    border: 4px solid #3EF079;
+    margin-bottom: 5%;
+}
+.login h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    font-weight: bold;
+    color: #3EF079;
+    text-align: center;
+  }
+
+
+.login .caixa__login-input {
+    position: relative;
+  }
+  
+  .caixa__login-input{
+    width: 80%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+
+  .caixa_atualizar{
+    width: 80%;
+    padding: 5px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffffde;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background: transparent;
+  }
+
+  .caixa__login-input::placeholder{
+    color: #ffffffa8;
+  }
+
+  .entrar{
+    background-color: transparent;
+    position: relative;
+    border: none;
+    color: #3EF079;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    padding: 5px;
 }
 
-button
-{
-    margin-top: 15px;
-    height: 60px;
+.entrar::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #3EF079;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
 }
 
-/*Funcionario*/
-button.btn-outline-primary
-{
-    
-    width: 200px;
-    font-family: 'Courie', monospace;
-    font-size: 16pt;
-    
-}
-/*Dono*/
-button.btn-outline-secondary
-{
-    
-    width: 200px;
-    font-family: 'Courie', monospace;
-    font-size: 16pt;
-    margin-top: 20px;
+.entrar:hover::after{
+    width: 100%;
 }
 
-/*Cliente*/
-button.btn-outline-warning
-{
-    
-    width: 200px;
-    font-family: 'Courie', monospace;
-    font-size: 16pt;
+.cadastrese{
+    margin-left: 10%;
 }
+
 
 /*Tela/Caixinha de Login*/
 
@@ -263,48 +322,10 @@ button.btn-outline-warning
 
 }
 /*Tela cliente Atualizar senha*/
-.formupdate > input{
-    padding: 10px;
-    border-radius: 6px;
-    width: 200px;
-    margin-top: 6px;
-}
-.formupdate{
-text-align: center;
-}
 
 
 /*Botoes*/
-/*Botao verde mo geral*/
-.buttonoptions{
-    text-align: center;
-    width: 120px;
-    height: 45px;
-    border-radius: 10px;
-    padding: 1px 20px;
-    background-color: #3EF079 ;
-    color: black;
-}
-.buttonoptions:hover{
-    opacity: 70%;
-    background-color:  #3FF099 ;
-}
 
-/*Botao verde login*/
-.buttonlogin{
-    text-align: center;
-    width: 120px;
-    height: 45px;
-    border-radius: 10px;
-    padding: 1px 20px;
-    background-color: #3EF079 ;
-    color: black;
-    margin-right: 30px;
-}
-.buttonlogin:hover{
-    opacity: 70%;
-    background-color:  #3FF099 ;
-}
 
 /*Botao de Remover Conta*/
 .buttonremover{
@@ -372,12 +393,6 @@ text-align: center;
 {
     font-size: 25px;
     font-weight: bold;
-}
-
-a#cadastrese
-{
-    font-size: 17px;
-    color: #3EF079;
 }
 
 #erro
@@ -450,14 +465,7 @@ a#cadastrese
 }
 
 /*Icone de voltar no canto superior esquerdo da tela dos usuarios*/
-#iconevoltar{
-    position: absolute;
-    color: #000000;
-    left: 0px;
-    top: 25%;
-    text-decoration: none;
-    z-index: 1;
-}
+
 
 #iconerelatorio{
     position: absolute;
@@ -504,100 +512,120 @@ a#cadastrese
     text-align: center;
 }
 
-.meio_dono{
+.tabelas{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    margin: auto;
 }
 
 .dias{
-    color: #3EF079;
-    font-weight: bolder;
-    border-top-left-radius: 15px;
-    margin: 0%;
-    margin-bottom: 10px;
-}
-
-.tabeladias{
-    background-color: #000000;
-    width: 400px;
-    height: 220px;
+    background-color: #1069c8;
+    display: flex;
+    min-width: 100px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border-top-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: 2px solid #ffffff;
-    margin-bottom: 20px;
-}
+} 
 
 .tabeladias > h5{
-    font-size: 20px;
+    font-size: 15px;
 }
 
-#buttondono{
+.topo_pesquisa{
     display: flex;
     justify-content: center;
-    margin-top: -40px;
+    align-items: center;
 }
 
 /*Classes para os botoes de opções do usuario na sua tela  */
+.opt_centralizar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.opt_alinhar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.opt_atualizar h3{
+    color: #3EF079;
+    font-size: 18px;
+}
+
+.opt_atualizar{
+    padding: 20px;
+    min-width: 400px;
+    background: rgba(0, 0, 0, 0.685);
+    box-sizing: border-box;
+    box-shadow: 0 15px 15px #0f0f0fa3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
 .opt{
-   width: 450px;
-   height: 65px;
-   background-color: transparent;
-   border-top-left-radius: 15px;
-   border-bottom-right-radius: 15px;
-   border: solid 3px #ffffff;
-   background-color: #000000f1;
-   margin-bottom: 10px;
-   margin-right: 30px;
-   margin-left: 15px;
+   background-color: rgb(16, 16, 15);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   margin: 2% auto;
+   max-width: 1300px;
+   width: 300px;
+   border-radius: 10px;
+   padding: 4px;
+}
+
+.opt > img{
+    width: 10%;
+}
+
+.opt > a{
+    right: 0;
+    width: 70%;
+}
+
+.bnt_images{
+    width: 40px;
 }
 
 .opt>a{
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
     font-weight: 1000;
     color: #3EF079;
     text-decoration: none;
-    margin-bottom: 10px;
-    
 }
 
 /*texto dentro da opcao do dono de ver contato de cliente e func. tava saindo da div*/
-.opt > a > p{
-    position: absolute;
-    margin-left: 35px;
-    bottom: 30px;
-    left: 34px;
-}
-
-.opt > a:hover{
-    opacity: 0.5;
+.opt:hover{
     color: #3EF079;
+    transform: translateX(5px) translate(5px);
+    box-shadow: #3EF079 7px 9px 0px;
+    transition: 0.5s;
 }
 
-.opt_central{
-    position: relative;
-    align-items: center;
-}
-
-.opt_centralizar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /*Tabela de Consulta de Reservas*/
 td, th {
     border: 1px solid;
     background-color: rgba(255, 255, 255, 0.739);
-    font-size: 20px;
+    padding: 3px;
   }
-  
 
   table {
-    width: 1000px;
-    left: 50%;
+    width: auto;
+    margin-bottom: 10%;
   }
 
 
@@ -625,11 +653,11 @@ a{
 }
 
 a:hover{
+   text-decoration: none; 
+}
+
+.link:hover{
     color: rgba(79, 67, 67, 0.692);
     text-decoration: none;
-}
-p{
-    padding-bottom: 0px;
-    margin-bottom: 0px;
 }
 

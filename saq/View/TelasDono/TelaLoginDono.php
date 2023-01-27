@@ -12,24 +12,20 @@
 <body>
     <div class="text-center">
         <a class="principal" href="../../index.html">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />       
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
     </div>
+
     <section class= "corpo">
-    <br><br><br>
-        <div class="meio">
+        <div class="login">
             <h1>Login Dono</h1>
             <form method="POST">
-                <div class="form-login">         
-                    <input type="email" id="inputEmail" name="Email_dono" placeholder="Entre com o email" required autofocus> <br>          
-                    <input type="password"  id="inputPassword" name="Senha_dono"  placeholder="Entre com a senha" required><br>           
-                    <button class="buttonlogin" name="entrar" type="submit">Entrar</button><br><br> 
+                <div>         
+                    <input class="caixa__login-input" type="email" id="inputEmail" name="Email_dono" placeholder="Entre com o email" required autofocus> <br>          
+                    <input class="caixa__login-input" type="password"  id="inputPassword" name="Senha_dono"  placeholder="Entre com a senha" required><br>           
+                    <button class="entrar" name="entrar" type="submit">Entrar</button>
        
                     <?php
                         //Conecta com os arquivos
@@ -67,7 +63,6 @@
                 </div>        
             </form>
         </div>
-        <br><br><br><br>
     </section>
     <footer class="rodape">
             APP Desenvolvido por
