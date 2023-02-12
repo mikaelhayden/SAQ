@@ -70,25 +70,27 @@ Class Cliente
 				$tabela_reserva="";
 				if($sql->rowCount()>0)
 				{
-					$tabela_reserva = "<font color='black'><center><table border=3>";
+					$tabela_reserva = "<table>";
 					$tabela_reserva.="
-					<table> 
-					<tr>
-						<th>Nome do cliente</th>
-						<th>Horários de Inicio da Reserva</th>
-						<th>Horário de Fim da Reserva</th>
-						<th>Data da Reserva</th>
-					</tr>";
+					<thead>
+						<tr>
+							<th>Cliente</th>
+							<th>Inicio da Reserva</th>
+							<th>Fim da Reserva</th>
+							<th>Data da Reserva</th>
+						</tr>
+					</thead>	
+					";
 					while(list($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $Nome_cliente)=$sql->fetch())
 					{
 						$Data_Reserva=date('d/m/Y', strtotime($Data_Reserva));
             			$tabela_reserva.="           			
 		                <tr>
 						<tr>
-							<th>$Nome_cliente</th>
-							<th>$Inicio_Reserva</th>
-							<th>$Fim_Reserva</th>
-							<th>$Data_Reserva</th>
+							<td>$Nome_cliente</th>
+							<td>$Inicio_Reserva</th>
+							<td>$Fim_Reserva</th>
+							<td>$Data_Reserva</th>
 						</tr>
 		               	</tr>";
 					}
@@ -126,13 +128,16 @@ Class Cliente
 				$tabela_reserva="";
 				if($sql->rowCount()>0)
 				{
-					$tabela_reserva = "<font color='black'><center><table border=3>";
+					$tabela_reserva = "<table>";
 					$tabela_reserva.="
-					<tr>				
-						<td>Horário de início da reserva</td>
-						<td>Horário do fim da reserva</td>
-						<td>Data da Reserva</td>
-					</tr>";
+					<thead>
+						<tr>				
+							<th>Início da reserva</td>
+							<th>Fim da reserva</td>
+							<th>Data da Reserva</td>
+						</tr>
+					</thead>	
+					";
 					while(list($Inicio_Reserva, $Fim_Reserva, $Data_Reserva)=$sql->fetch())
 					{
 						$Data_Reserva=date('d/m/Y', strtotime($Data_Reserva));
@@ -143,13 +148,14 @@ Class Cliente
 		                	<td>$Data_Reserva</td>
 		                </tr>";
 					}
-					$tabela_reserva.="</table></font>";
+					$tabela_reserva.="</table>";
 
 					if($tabela_reserva!="")
 					{
 						echo $tabela_reserva;
 						echo "
-        				<div id='bntcancelarreserva'><a id='cancelarreserva' href='../TelasCliente/TelaCancelarReserva.php'>Cancelar Reserva</a></div>
+						<br>
+        				<a class='entrar' href='../TelasCliente/TelaCancelarReserva.php'>Cancelar Reserva</a>
         				</form>";   	        				
           				return true;     				
 					}

@@ -13,48 +13,63 @@
 <body>
     <div class="text-center">
         <a class="principal" href="../../index.html">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
     </div>
+
     <section class= "corpo">
-    <br><br><br>
-        <div class="mid">
-            <h1>Cadastre-se ou <a href="TelaLoginFuncionario.php"> Faça o Login </a></h1>
+        <div class="opt_atualizar">
+            <h1>Cadastre-se ou <a class="logar" href="TelaLoginFuncionario.php"> Faça o Login </a></h1>
 	        <form method="POST" action="../../Model/Cadastro.php">
-                <div class="form-login">
-                    <input type="text" id="inputNome" name="Nome_Funcionario" placeholder="Nome Completo" maxlength="30" required autofocus> <br>
+                <div class="opt_alinhar">
+                    <div>
+                        <input class="caixa_atualizar" type="text" id="inputNome" name="Nome_Funcionario" placeholder="Nome Completo" maxlength="30" required autofocus>
+                    </div>
                     
-                    <input type="email" id="inputEmail" name="Email_Funcionario"placeholder="Email" maxlength="30" required autofocus> <br>
-
-                    <input type="tel" id="inputTelefone" name="Telefone_Funcionario" placeholder="Telefone" maxlength="11" pattern="\d{11}" required> <br>
-
-                    <input type="time" id="inputInicioExpediente" name="Inicio_Expediente" required autofocus> <br>
-
-                    <input type="time" id="inputFimExpediente" name="Fim_Expediente" required autofocus> <br>
-
-                    <input type="password" id="inputPassword" name="Senha_Funcionario" placeholder="Crie uma Senha" minlength="9" required> <br>
-
-                    <input type="password" id="inputPassword" name="confsenha" placeholder="Confirmar senha" minlength="9" required> <br>
-            
-                    <button class="buttonoptions" name="cadastrar_funcionario" type="submit">Cadastrar</button> <br> <br>                
+                    <div>
+                        <input class="caixa_atualizar" type="email" id="inputEmail" name="Email_Funcionario"placeholder="Email" maxlength="30" required autofocus>
+                    </div>
                 </div>
+
+                <div class="opt_alinhar">
+                    <div>
+                    <input class="caixa_atualizar" type="tel" id="inputTelefone" name="Telefone_Funcionario" placeholder="Telefone" maxlength="11" pattern="\d{11}" required> 
+                    </div>
+        
+                    <div>
+                    <abbr title="Inserir Horario de Inicio do Exepediente"><input class="caixa_atualizar" type="time" id="inputInicioExpediente" name="Inicio_Expediente" required autofocus></abbr>
+                    </div>
+
+                    <div>
+                    <abbr title="Inserir Horario de Fim de Expediente"><input class="caixa_atualizar" type="time" id="inputFimExpediente" name="Fim_Expediente" required autofocus> </abbr>
+                    </div>
+                </div>
+
+                <div class="opt_alinhar">
+                    <div>
+                    <input class="caixa_atualizar" type="password" id="inputPassword" name="Senha_Funcionario" placeholder="Crie uma Senha" minlength="9" required> 
+                    </div>
+
+                    <div>
+                    <input class="caixa_atualizar" type="password" id="inputPassword" name="confsenha" 
+                    placeholder="Confirmar senha" minlength="9" required> 
+                    </div>
+                </div>
+
+                    <button class="entrar" name="cadastrar_funcionario" type="submit">Cadastrar</button>               
             </form>
         </div>
-    <br><br><br>
+
     </section>
     <footer class="rodape">
         APP Desenvolvido por
-        <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
-        <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
-        <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+        <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+        <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+        <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
         <i class="bi bi-diamond-half"></i>
         <i class="bi bi-diamond-half"></i>
-    </footer>
+    </footer>  
 </body>
 </html>

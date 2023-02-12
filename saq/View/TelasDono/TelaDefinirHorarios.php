@@ -18,8 +18,9 @@
         </a>
     </div>
 
-    <section class="corpo">
-	        <form class="tabelas" method="POST" action="../../Model/DefinirHorarios.php">
+
+    <section class="corpo2 opt_alinhar">
+	        <form method="POST" action="../../Model/DefinirHorarios.php">
                         <?php
                             //Conecta com os arquivos
                             require_once '../../Controller/Conexao.php';
@@ -48,61 +49,64 @@
 
                         <div class="dias">
                             <h1>Segunda-Feira</h1>
-                            <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Segunda" maxlength="5" value="<?php echo $H_I_Segunda; ?>"> 
-                            <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Segunda" maxlength="5" value="<?php echo $H_F_Segunda; ?>">
+                            <h5>Horário de Início </h5>            
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Segunda" maxlength="5" value="<?php echo $H_I_Segunda; ?>"> 
+                            <h5>Horário de Fim</h5>     
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Segunda" maxlength="5" value="<?php echo $H_F_Segunda; ?>">
                         </div>
 
                         <div class="dias">
                             <h1>Terça-Feira</h1>		
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Terca" maxlength="5" value="<?php echo $H_I_Terca; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Terca" maxlength="5" value="<?php echo $H_I_Terca; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Terca" maxlength="5" value="<?php echo $H_F_Terca; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Terca" maxlength="5" value="<?php echo $H_F_Terca; ?>">
                         </div>
 
                         <div class="dias">
                         <h1>Quarta-Feira</h1> 
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Quarta" maxlength="5" value="<?php echo $H_I_Quarta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Quarta" maxlength="5" value="<?php echo $H_I_Quarta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Quarta" maxlength="5" value="<?php echo $H_F_Quarta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Quarta" maxlength="5" value="<?php echo $H_F_Quarta; ?>">
                         </div>
 
                         <div class="dias">
                         <h1>Quinta-Feira</h1>                     
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Quinta" maxlength="5" value="<?php echo $H_I_Quinta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Quinta" maxlength="5" value="<?php echo $H_I_Quinta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Quinta" maxlength="5" value="<?php echo $H_F_Quinta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Quinta" maxlength="5" value="<?php echo $H_F_Quinta; ?>">
                         </div>
 
                         <div class="dias">
                         <h1>Sexta-Feira</h1>                    
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Sexta" maxlength="5" value="<?php echo $H_I_Sexta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Sexta" maxlength="5" value="<?php echo $H_I_Sexta; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Sexta" maxlength="5" value="<?php echo $H_F_Sexta; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Sexta" maxlength="5" value="<?php echo $H_F_Sexta; ?>">
                         </div>
 
                         <div class="dias">
                         <h1>Sábado</h1>                       
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Sabado" maxlength="5" value="<?php echo $H_I_Sabado; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Sabado" maxlength="5" value="<?php echo $H_I_Sabado; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Sabado" maxlength="5" value="<?php echo $H_F_Sabado; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Sabado" maxlength="5" value="<?php echo $H_F_Sabado; ?>">
                         </div>
 
                         <div class="dias">
                         <h1>Domingo</h1>                     
                             <h5> Horário de início </h5>            
-                            <input type="time" name="Horario_Inicio_Domingo" maxlength="5" value="<?php echo $H_I_Domingo; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Inicio_Domingo" maxlength="5" value="<?php echo $H_I_Domingo; ?>">
                             <h5> Horário do fim  </h5>     
-                            <input type="time" name="Horario_Fim_Domingo" maxlength="5" value="<?php echo $H_F_Domingo; ?>">
+                            <input class="caixa_atualizar" type="time" name="Horario_Fim_Domingo" maxlength="5" value="<?php echo $H_F_Domingo; ?>">
                         </div>
-                <div>
-                    <button name="Definir" type="submit">Definir</button>          
+                <div class="definir">
+                    <button class="entrar" name="Definir" type="submit">Definir</button>          
+                </div>
+                <div class="definir">
+                <a class="entrar" href="../TelasDono/TelaDono.php">Voltar</a>
                 </div>
             </form>
     </section>

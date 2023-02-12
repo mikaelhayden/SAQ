@@ -65,15 +65,17 @@ Class Funcionario
 				$tabela_reserva="";
 				if($sql->rowCount()>0)
 				{
-					$tabela_reserva = "<font color='black'><center><table border=3>";
+					$tabela_reserva = "<table>";
 					$tabela_reserva.="
 					
-					<tr>
-						<th>Nome do cliente</th>
-						<th>Horários de Inicio da Reserva</th>
-						<th>Horário de Fim da Reserva</th>
-						<th>Data da Reserva</th>
-					</tr>
+					<thead>
+						<tr>
+							<th>Cliente</th>
+							<th>Inicio da Reserva</th>
+							<th>Fim da Reserva</th>
+							<th>Data da Reserva</th>
+						</tr>
+					</thead>	
 					";
 					while(list($Inicio_Reserva, $Fim_Reserva, $Data_Reserva, $Nome_cliente)=$sql->fetch())
 					{

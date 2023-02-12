@@ -16,18 +16,13 @@
 <body>
     <div class="text-center">
         <a class="principal" href="../../index.html">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />    
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
     </div>
 
     <section class= "corpo">
-    <br><br><br>
         <div class="mid">
             <h1>Cadastre-se ou <a href="TelaLoginFuncionario.php"> Faça o Login </a></h1>
 	        <form method="POST">

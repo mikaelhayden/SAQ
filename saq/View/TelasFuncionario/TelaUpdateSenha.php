@@ -11,26 +11,21 @@
 </head>
 <body>
     <div class="text-center">
-        <a class="principal" href="TelaFuncionario.php">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" /> 
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
-        <p>Atualizar Senha</p> 
-        <a id ='iconevoltar' href="TelaFuncionario.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
     </div>
+
     <section class= "corpo">
-        <br><br><br>
-        <div class="meio2">
+        <div class="login">
+            <h1>Alteração de Senha</h1>
             <form  method="POST">
-                <div class="formupdate">
-                    <input type="password" name="Senha_Nova" minlength="9" maxlength="15" required placeholder="Insira uma Nova Senha"><br>
-		            <input type="password" name="confSenha" minlength="9" maxlength="15" required placeholder="Confirmar Nova Senha" > <br> 
-                    <button class="buttonoptions" name="update" type="submit">Alterar</button>        
+                <div>
+                    <input class="caixa__login-input" type="password" name="Senha_Nova" minlength="9" maxlength="15" required placeholder="Insira uma Nova Senha"><br>
+		            <input class="caixa__login-input" type="password" name="confSenha" minlength="9" maxlength="15" required placeholder="Confirmar Nova Senha" > <br> 
+                    <button class="entrar" name="update" type="submit">Alterar</button>        
                 </div>
             </form> 
         </div>
@@ -61,7 +56,7 @@
                 $f->updateSenha($novaSenha, $confirmarSenha, $email_cookie);            
             }
         ?>
-
+        <a class="entrar" href="../TelasFuncionario/TelaFuncionario.php">Voltar</a>
     </section>   
 </body>
 <footer class="rodape">

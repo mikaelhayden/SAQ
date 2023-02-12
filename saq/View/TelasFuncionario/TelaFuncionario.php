@@ -42,15 +42,12 @@
 </head>
 <body>
     <div class="text-center">
-        <a class="principal" href="TelaFuncionario.php">
-            <nav id="cabecario">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />     
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
             </nav>
         </a>
+    </div>
 
         <?php
             if($sql->rowCount()>0)
@@ -63,34 +60,39 @@
                 </div>";          
             }
         ?>
-
     </div>
+
     <section class= "corpo">
-        <br><br><br>
         <div class="opt_centralizar">
-            <div class="opt">   
-                <a href="TelaBuscarRelatorios.php" ><img src="../assets/img/lupa.png" alt="Inserir" width="55">   Relatórios de Aluguel</a> 
+            <div class="opt opt2">   
+                <img src="../assets/img/lupa.png" alt="Inserir" width="30">
+                <a href="TelaBuscarRelatorios.php" >Relatórios de Aluguel</a> 
             </div>
-            <div class="opt">	
-                <a  href="TelaUpdateDados.php"><img src="../assets/img/gear.png" alt="Inserir" width="55"> Alterar Dados</a>
+
+            <div class="opt opt2">	
+                <img src="../assets/img/gear.png" alt="Inserir" width="30">
+                <a href="TelaUpdateDados.php">Alterar Dados</a>
             </div>
-            <div class="opt">	
-                <a  href="TelaUpdateSenha.php"><img src="../assets/img/mostrar-senha.png" alt="Inserir" width="55"> Alterar Senha</a>
+
+            <div class="opt opt2">	
+                <img src="../assets/img/mostrar-senha.png" alt="Inserir" width="30">
+                <a  href="TelaUpdateSenha.php">Alterar Senha</a>
             </div>
-            <div class="opt">   
-                <a href="../../Model/SairFuncionario.php"><img src="../assets/img/log-out.png" alt="Inserir" width="55">   Encerrar Sessão</a>
+
+            <div class="opt opt2">
+                <img src="../assets/img/log-out.png" alt="Inserir" width="30">
+                <a href="../../Model/SairFuncionario.php">Encerrar Sessão</a>
             </div>
-        
         </div>
-        <br><br><br>
     </section>
 </body>
-<footer class="rodape">
-    APP Desenvolvido por
-    <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
-    <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
-    <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
-    <i class="bi bi-diamond-half"></i>
-    <i class="bi bi-diamond-half"></i>
-</footer>
+
+    <footer class="rodape">
+        APP Desenvolvido por
+        <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+        <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+        <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+        <i class="bi bi-diamond-half"></i>
+        <i class="bi bi-diamond-half"></i>
+    </footer>  
 </html>

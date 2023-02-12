@@ -57,7 +57,7 @@
                 }
             }
         ?>
-
+    <a class="entrar" href="../TelasDono/TelaDono.php">Voltar</a>
     </section>   
 </body>
 <footer class="rodape">

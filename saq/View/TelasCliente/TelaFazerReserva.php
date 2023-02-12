@@ -9,36 +9,36 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="text-center">
-    <div class="text-center">      
-        <nav id="cabecario">
-            <a class="principal" href="TelaCliente.php">
-                <h2 >SISTEMA DE ALUGUEL DE QUADRA ESPORTIVA</h2>
-                <img src="../assets/img/Bola-de-Futebol.png" alt="SAQ" width ="50" /> 
-                <img src="../assets/img/BolaDeBasquete-removebg-preview.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BoladeHandboll.png" alt="SAQ" width ="55" />
-                <img src="../assets/img/BolaDeVolei.png" alt="SAQ" width ="55" />
-            </a>
-        </nav>     
-        <p>Fazer Reservas  </p> 
-        <a id ='iconevoltar' href="TelaCliente.php"><img src="../assets/img/voltar.png" width="35" alt="Voltar"></a>
-        <abbr title="Clique Aqui Para Verificar Disponibilidade Da Quadra"><a id ='iconevisualizar' href="TelaHorarios.php"><img src="../assets/img/relogio.png" width="35" alt="Voltar"></a></abbr>
-
+<body>
+    <div class="text-center">
+        <a class="principal" href="../../index.html">
+            <nav class="cabecario">
+                <img src="../assets/img/futebol (1).png" alt="" width="35px"><h2>SAQ</h2>
+            </nav>
+        </a>
     </div>
-    <section class="corpo">
-        <br><br><br>     
-        <div class= "midreserva">
-            <h1>Faça a Reserva Inserindo os Dados:</h1>
-            <br>
+
+    <section class="corpo">  
+        <div>
 	        <form method="POST">
-                <div class="form-login">
-                    <h5> Horário de início da reserva </h5>            
-                    <input type="time" id="#" name="Inicio_Reserva" required autofocus> <br>
-                    <h5> Horário do fim da reserva </h5>     
-                    <input type="time" id="#" name="Fim_Reserva" required autofocus> <br>
-                    <h5> Data da Reserva </h5>
-                    <input type="date" id="#" name="Data_Reserva" placeholder="Data da Reserva" required autofocus> <br>      
-                    <button class="buttonoptions" name="solicitar" type="submit">Reservar</button> <br><br>
+                <div class="opt_atualizar">
+
+                    <div>
+                        <h5> Horário de início </h5>
+                        <input class="caixa_atualizar" type="time" id="#" name="Inicio_Reserva" required autofocus>
+                    </div>
+
+                    <div>
+                        <h5> Horário do fim</h5>
+                        <input class="caixa_atualizar" type="time" id="#" name="Fim_Reserva" required autofocus>
+                    </div>
+
+                    <div>
+                        <h5> Data da Reserva </h5>
+                        <input class="caixa_atualizar" type="date" id="#" name="Data_Reserva" placeholder="Data da Reserva" required autofocus>
+                    </div>
+
+                    <button class="entrar" name="solicitar" type="submit">Reservar</button>
                        
                     <?php
                         //Conecta com os arquivos
@@ -109,7 +109,7 @@
                 </div>
             </form>
         </div>
-        <br><br><br>
+        <a class="entrar" href="../TelasCliente/TelaCliente.php">Voltar</a>
     </section>  
     <footer class="rodape">
             APP Desenvolvido por

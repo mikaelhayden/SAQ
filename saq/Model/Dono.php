@@ -60,23 +60,28 @@ Class Dono
 		$tabela_reserva="";
 		if($sql->rowCount()>0)
 		{
-			$tabela_reserva = "<font color='black'><center><table border=3>";
+			$tabela_reserva = "<table>";
 			$tabela_reserva.="
-					
-			<tr>
-				<th>Data da reserva</th>
-				<th>Quantidade de reservas</th>	
-			</tr>";
+			
+			<thead>
+				<tr>
+					<th>Data da reserva</th>
+					<th>Quantidade de reservas</th>	
+				</tr>
+			</thead>	
+				";
 
 			while(list($Data_Reserva, $q)=$sql->fetch())
 			{
 				$Data_Reserva=date('d/m/Y', strtotime($Data_Reserva));
             	$tabela_reserva.=" 
-						        			
-				<tr>
-					<th>$Data_Reserva</th>
-					<th>$q</th>				
-				</tr>";
+				<tbody>		        			
+					<tr>
+						<td>$Data_Reserva</th>
+						<td>$q</th>				
+					</tr>
+				</tbody>
+					";	
 			}
 			$tabela_reserva.="</table></font>";
 
@@ -102,14 +107,17 @@ Class Dono
 		$tabela_union="";
 		if($sql->rowCount()>0)
 		{
-			$tabela_union = "<font color='black'><center><table border=3>";
+			$tabela_union = "<table>";
 			$tabela_union.="
-					
-			<tr>
-				<th>Nomes</th>
-				<th>Email</th>
-				<th>Contatos</th>		
-			</tr>";
+			
+			<thead>
+				<tr>
+					<th>Nomes</th>
+					<th>Email</th>
+					<th>Contatos</th>		
+				</tr>
+			</thead>
+			";
 
 			while(list($nome, $email, $telefone)=$sql->fetch())
 			{
@@ -144,14 +152,17 @@ Class Dono
 		$tabela="";
 		if($sql->rowCount()>0)
 		{
-			$tabela = "<font color='black'><center><table border=3>";
+			$tabela = "<table>";
 			$tabela.="
-					
-			<tr>
-				<th>Nomes</th>
-				<th>Email</th>
+			
+			<thead>		
+				<tr>
+					<th>Nomes</th>
+					<th>Email</th>
 		
-			</tr>";
+				</tr>
+			</thead>
+			";
 
 			while(list($nome, $email)=$sql->fetch())
 			{

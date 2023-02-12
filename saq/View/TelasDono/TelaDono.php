@@ -69,23 +69,23 @@
         <div class="opt_centralizar">	
             <div class="opt">
                 <img src="../assets/img/reservado.png" alt="Inserir" width="30">
-                <a href="TelaDefinirHorarios.php">Definir Horários de funcionamento</a>
+                <a href="TelaDefinirHorarios.php">Funcionamento</a>
             </div>
 
             <div class="opt">    
                 <img src="../assets/img/contadordia.png" alt="Inserir" width="30">
-                <a  href="TelaGroupBy.php">Quantidade de reservas de cada dia</a>
+                <a  href="TelaGroupBy.php">Reservas</a>
             </div>
         
             <div class="opt">
                 <img src="../assets/img/lupa.png" alt="Inserir" width="30">
-                <a  href="TelaLike.php">Pesquisar clientes por letras</a>
+                <a  href="TelaLike.php">Pesquisar clientes</a>
             </div>
         
         	
             <div class="opt">
                 <img src="../assets/img/livro-de-contato.png" alt="Inserir" width="30">
-                <a  href="TelaUnion.php">Contato dos clientes e funcionários</a>
+                <a  href="TelaUnion.php">Contatos</a>
             </div>
 
            

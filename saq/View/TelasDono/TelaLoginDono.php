@@ -63,14 +63,16 @@
                 </div>        
             </form>
         </div>
+
+        
     </section>
     <footer class="rodape">
             APP Desenvolvido por
-            <a href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
-            <a href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
-            <a href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
+            <a class="link" href="https://github.com/WALTER-OBS-DEBUG" target="_blank">Walter Jonas,</a>
+            <a class="link" href="https://github.com/AntonyGuzma" target="_blank">Antony Gusmão,</a>
+            <a class="link" href="https://github.com/mikaelhayden" target="_blank">e Mikael Hayden &copy;</a>
             <i class="bi bi-diamond-half"></i>
             <i class="bi bi-diamond-half"></i>
-    </footer>
+    </footer>   
 </body>
 </html>

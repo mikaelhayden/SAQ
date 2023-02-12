@@ -43,6 +43,8 @@
                 echo "<div> <p id='semrelatorios'>Não Existe Nenhum usuário :(</p></div>";
             }         
         ?>
+        
+        <br><a class="entrar" href="../TelasDono/TelaDono.php">Voltar</a>
     </section>
 
     <footer class="rodape">
